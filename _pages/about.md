@@ -14,7 +14,7 @@ profile:
     <p>Toronto, Canada</p>
 
 selected_papers: true
-social: true
+social: false # temporarily disabled, fixing jekyll-socials plugin issue
 
 announcements:
   enabled: false
