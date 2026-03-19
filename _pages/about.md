@@ -29,6 +29,4 @@ latest_posts:
 
 Welcome! I am a PhD student in Economics at the University of Toronto.
 
-My research lies at the intersection of development economics and economic history, with a focus on the spatial dimensions of economic change. I am currently studying the short- and long-run effects of foreign direct investment in the sugar industry on Puerto Rico's development.
-
-I also work on topics related to policy evaluation, including the impact of improving management practices on student outcomes and the effects of school closures on students and communities.
+I work on topics in economic development, including the role of colonial institutions in shaping long-run economic trajectories and modern interventions in education such as the impact of management practices and school closures on students and communities. My research draws on tools from spatial economics and economic history.
