@@ -1,0 +1,35 @@
+cv:
+  name: Jeancarlo Vélez Lebrón
+  label: PhD Student in Economics
+  email: j.velezlebron@mail.utoronto.ca
+  location: Toronto, Canada
+  image: ""
+  summary: PhD student in Economics at the University of Toronto. Research in development economics, economic history, and spatial economics.
+
+  social_networks:
+    - network: GitHub
+      username: jcarlov
+    - network: LinkedIn
+      username: jeancarlo-velez
+
+  sections:
+    Education:
+      - institution: University of Toronto
+        location: Toronto, Canada
+        area: Economics
+        studyType: PhD
+        start_date: ""
+        end_date: ""
+        highlights:
+          - "Fields: Development Economics, Economic History"
+
+    Teaching:
+      - company: University of Toronto
+        position: Teaching Assistant
+        location: Toronto, Canada
+        start_date: 2024
+        end_date: ""
+        highlights:
+          - "ECO324: Economic Development (Fall 2025)"
+          - "ECO364: International Trade (Fall 2024, Winter 2026)"
+          - "ECO421: Special Topics in Economics and Trade Policy (Fall 2025)"
