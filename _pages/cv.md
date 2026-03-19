@@ -4,9 +4,9 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 4
-cv_pdf: # add path to your CV PDF here when ready (e.g., /assets/pdf/cv.pdf)
+cv_pdf: # add path when you have a PDF version (e.g., /assets/pdf/cv.pdf)
 cv_format: rendercv
-description: A full CV will be available here soon.
+description:
 toc:
   sidebar: left
 ---

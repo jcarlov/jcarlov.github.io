@@ -4,7 +4,7 @@ cv:
   email: j.velezlebron@mail.utoronto.ca
   location: Toronto, Canada
   image: ""
-  summary: PhD student in Economics at the University of Toronto. Research in development economics, economic history, and spatial economics.
+  summary: ""
 
   social_networks:
     - network: GitHub
@@ -23,6 +23,15 @@ cv:
         highlights:
           - "Fields: Development Economics, Economic History"
 
+    "Work in Progress":
+      - company: ""
+        position: ""
+        start_date: ""
+        end_date: ""
+        highlights:
+          - '"Sugar Rush: The Effect of Foreign Direct Investment in Colonial Puerto Rico (1898-1952)" (Job Market Paper)'
+          - '"Improving and Sustaining Management Practices in Public Schools: Evidence from Puerto Rico" (with G. Bobonis, M. González-Navarro, and D. Scur)'
+
     Teaching:
       - company: University of Toronto
         position: Teaching Assistant
@@ -33,3 +42,11 @@ cv:
           - "ECO324: Economic Development (Fall 2025)"
           - "ECO364: International Trade (Fall 2024, Winter 2026)"
           - "ECO421: Special Topics in Economics and Trade Policy (Fall 2025)"
+
+    Skills:
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "R, Stata, Python, GIS"
+      - name: Languages
+        icon: fa-solid fa-language
+        keywords: "Spanish (native), English (fluent)"
