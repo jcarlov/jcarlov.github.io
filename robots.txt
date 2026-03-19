@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://jcarlov.github.io/sitemap.xml
