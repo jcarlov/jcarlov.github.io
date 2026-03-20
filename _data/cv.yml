@@ -68,14 +68,6 @@ cv:
           - "ECO364: International Trade (Fall 2024, Winter 2026)"
           - "ECO421: Special Topics in Economics and Trade Policy (Fall 2025)"
 
-    "Awards & Fellowships":
-      - name: Awards
-        icon: fa-solid fa-award
-        keywords:
-          - "University of Toronto Fellowship (2022-Present)"
-          - "Best Graduate Student Award, Dept. of Economics, UPR (2021)"
-          - "Beca Crecemos Contigo, Senate of Puerto Rico (2018)"
-
     Skills:
       - name: Programming
         icon: fa-solid fa-code
@@ -83,3 +75,6 @@ cv:
       - name: Languages
         icon: fa-solid fa-language
         keywords: "Spanish (native), English (fluent)"
+      - name: Awards & Fellowships
+        icon: fa-solid fa-award
+        keywords: "University of Toronto Fellowship (2022–Present) · Best Graduate Student Award, UPR Economics (2021) · Beca Crecemos Contigo, Senate of Puerto Rico (2018)"
