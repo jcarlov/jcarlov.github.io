@@ -13,8 +13,18 @@ nav_order: 2
 
 {% include bib_search.liquid %}
 
+<h2 class="bibliography-heading">Work in Progress</h2>
+
 <div class="publications">
 
-{% bibliography %}
+{% bibliography --query @unpublished %}
+
+</div>
+
+<h2 class="bibliography-heading" style="margin-top: 2rem;">Other Work</h2>
+
+<div class="publications">
+
+{% bibliography --query @mastersthesis %}
 
 </div>
