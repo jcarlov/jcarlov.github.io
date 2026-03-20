@@ -18,7 +18,7 @@ cv:
         location: Toronto, Canada
         area: Economics
         studyType: PhD
-        start_date: ""
+        start_date: "2022"
         end_date: ""
         highlights:
           - "Fields: Development Economics, Economic History"
@@ -47,15 +47,21 @@ cv:
           - '"Sugar Rush: The Effect of Foreign Direct Investment in Colonial Puerto Rico (1898-1952)" (Job Market Paper)'
           - '"Improving and Sustaining Management Practices in Public Schools: Evidence from Puerto Rico" (with G. Bobonis, M. González-Navarro, and D. Scur)'
 
+    "Conference Presentations":
+      - company: ""
+        position: ""
+        start_date: ""
+        end_date: ""
+        highlights:
+          - "Canadian Economic Association (2026, scheduled)"
+
     "Research Experience":
       - company: University of Toronto
         position: Research Assistant to Prof. Gustavo Bobonis
         start_date: 2019
         end_date: 2022
         highlights:
-          - "Coordinated field operations for a randomized controlled trial on management training for ~845 public school principals in Puerto Rico"
-          - "Built and maintained data pipelines for survey, administrative, and school-level data"
-          - "Supported design and analysis of ATEMA, a computer-assisted learning intervention using Khan Academy in Puerto Rico"
+          - "Management RCT in Puerto Rico public schools; ATEMA (computer-assisted learning with Khan Academy in PR)"
 
     Teaching:
       - company: University of Toronto
@@ -68,6 +74,13 @@ cv:
           - "ECO364: International Trade (Fall 2024, Winter 2026)"
           - "ECO421: Special Topics in Economics and Trade Policy (Fall 2025)"
 
+    Service:
+      - company: University of Toronto
+        position: President, Graduate Economics Union (GEU)
+        start_date: 2025
+        end_date: ""
+        highlights: []
+
     Skills:
       - name: Programming
         icon: fa-solid fa-code
@@ -77,4 +90,4 @@ cv:
         keywords: "Spanish (native), English (fluent)"
       - name: Awards & Fellowships
         icon: fa-solid fa-award
-        keywords: "University of Toronto Fellowship (2022–Present) · Best Graduate Student Award, UPR Economics (2021) · Beca Crecemos Contigo, Senate of Puerto Rico (2018)"
+        keywords: "UofT Fellowship (2022–Present) · UofT Economics Graduate Program Award (2022, 2024, 2025) · UofT FAS Program-level Fellowship (2022, 2023) · Best Graduate Student, UPR Economics (2021) · Beca Crecemos Contigo, Senate of PR (2018) · Engineering Leadership Certificate, Cornell (2016)"
