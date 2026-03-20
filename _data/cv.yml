@@ -53,8 +53,9 @@ cv:
         start_date: 2019
         end_date: 2022
         highlights:
-          - "Management RCT in Puerto Rico public schools"
-          - "ATEMA (computer-assisted learning with Khan Academy in PR)"
+          - "Coordinated field operations for a randomized controlled trial on management training for ~845 public school principals in Puerto Rico"
+          - "Built and maintained data pipelines for survey, administrative, and school-level data"
+          - "Supported design and analysis of ATEMA, a computer-assisted learning intervention using Khan Academy in Puerto Rico"
 
     Teaching:
       - company: University of Toronto
@@ -72,11 +73,8 @@ cv:
         icon: fa-solid fa-award
         keywords:
           - "University of Toronto Fellowship (2022-Present)"
-          - "Department of Economics Graduate Program Award, UofT (2022, 2024, 2025)"
-          - "Faculty of Arts and Science Program-level Fellowship, UofT (2022, 2023)"
           - "Best Graduate Student Award, Dept. of Economics, UPR (2021)"
           - "Beca Crecemos Contigo, Senate of Puerto Rico (2018)"
-          - "Engineering Leadership Certificate, Cornell University (2016)"
 
     Skills:
       - name: Programming
