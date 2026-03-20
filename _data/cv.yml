@@ -22,6 +22,21 @@ cv:
         end_date: ""
         highlights:
           - "Fields: Development Economics, Economic History"
+      - institution: University of Puerto Rico
+        location: San Juan, PR
+        area: Economics
+        studyType: MA
+        start_date: ""
+        end_date: "2021"
+        highlights:
+          - "Thesis: China's Evolving Role in Asian Trade: A Network Approach"
+      - institution: Cornell University
+        location: Ithaca, NY
+        area: Chemical Engineering
+        studyType: BS
+        start_date: "2012"
+        end_date: "2017"
+        highlights: []
 
     "Work in Progress":
       - company: ""
@@ -31,6 +46,15 @@ cv:
         highlights:
           - '"Sugar Rush: The Effect of Foreign Direct Investment in Colonial Puerto Rico (1898-1952)" (Job Market Paper)'
           - '"Improving and Sustaining Management Practices in Public Schools: Evidence from Puerto Rico" (with G. Bobonis, M. González-Navarro, and D. Scur)'
+
+    "Research Experience":
+      - company: University of Toronto
+        position: Research Assistant to Prof. Gustavo Bobonis
+        start_date: 2019
+        end_date: 2022
+        highlights:
+          - "Management RCT in Puerto Rico public schools"
+          - "ATEMA (computer-assisted learning with Khan Academy in PR)"
 
     Teaching:
       - company: University of Toronto
@@ -42,6 +66,17 @@ cv:
           - "ECO324: Economic Development (Fall 2025)"
           - "ECO364: International Trade (Fall 2024, Winter 2026)"
           - "ECO421: Special Topics in Economics and Trade Policy (Fall 2025)"
+
+    "Awards & Fellowships":
+      - name: Awards
+        icon: fa-solid fa-award
+        keywords:
+          - "University of Toronto Fellowship (2022-Present)"
+          - "Department of Economics Graduate Program Award, UofT (2022, 2024, 2025)"
+          - "Faculty of Arts and Science Program-level Fellowship, UofT (2022, 2023)"
+          - "Best Graduate Student Award, Dept. of Economics, UPR (2021)"
+          - "Beca Crecemos Contigo, Senate of Puerto Rico (2018)"
+          - "Engineering Leadership Certificate, Cornell University (2016)"
 
     Skills:
       - name: Programming
