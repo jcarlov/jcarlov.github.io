@@ -37,7 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{
+        },{id: "news-serving-as-president-of-the-graduate-economics-union-geu-at-the-university-of-toronto",
+          title: 'Serving as President of the Graduate Economics Union (GEU) at the University of...',
+          description: "",
+          section: "News",},{id: "news-scheduled-to-present-at-the-canadian-economic-association-annual-conference-2026",
+          title: 'Scheduled to present at the Canadian Economic Association Annual Conference, 2026.',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -57,6 +63,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/jeancarlo-velez", "_blank");
+        },
+      },{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/jcarlov.bsky.social", "_blank");
         },
       },{
       id: 'light-theme',
