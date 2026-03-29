@@ -29,4 +29,4 @@ latest_posts:
 
 Welcome! I am a PhD student in Economics at the University of Toronto.
 
-I work on topics in economic development, including the role of colonial institutions in shaping long-run economic trajectories and modern interventions in education such as the impact of management practices and school closures on students and communities. My research draws on tools from spatial economics and economic history.
+I work on topics in economic development and economic history, including the role of colonial institutions in shaping economic trajectories and modern interventions in education such as the impact of management practices and school closures on students and communities. My research draws on tools from spatial and urban economics.
