@@ -9,25 +9,15 @@ nav_order: 3
 
 ## University of Toronto, Department of Economics
 
-**Winter 2026**
-- ECO364: International Trade -- Teaching Assistant
+### Teaching Assistant
 
-**Fall 2025**
-- ECO403: Economic Development -- Teaching Assistant
-- ECO421: International Trade Policy -- Teaching Assistant
+- ECO364: International Trade -- Winter 2026, 2024-25
+- ECO403: Economic Development -- Fall 2025
+- ECO421: International Trade Policy -- Fall 2025
 
-**Summer 2025**
-- ECO102: Introductory Macroeconomics -- Grader
+### Grader
 
-**2024-25**
-- ECO364: International Trade -- Teaching Assistant
-- ECO102: Introductory Macroeconomics -- Grader
-
-**2023-24**
-- ECO324: Economic Development -- Grader
-- ECO102: Introductory Macroeconomics -- Grader
-
-**2022-23**
-- ECO324: Economic Development -- Grader
-- ECO225: Big-Data Tools for Economists -- Grader
-- ECO435/ECO1730: Economics of Modern China -- Grader
+- ECO102: Introductory Macroeconomics -- Summer 2025, 2024-25, 2023-24
+- ECO324: Economic Development -- 2023-24, 2022-23
+- ECO225: Big-Data Tools for Economists -- 2022-23
+- ECO435/ECO1730: Economics of Modern China -- 2022-23
