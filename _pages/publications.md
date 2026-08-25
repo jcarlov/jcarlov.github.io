@@ -21,13 +21,13 @@ nav_order: 2
 
 </div>
 
-<h2 class="bibliography-heading" style="margin-top: 2rem;">Other Work</h2>
+<h2 class="bibliography-heading">Other Work</h2>
 
 <div class="publications">
   <ol class="bibliography">
     <li>
       <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-12">
           <div class="title">China's Evolving Role in Asian Trade: A Network Approach</div>
           <div class="author"><em>Jeancarlo Vélez Lebrón</em></div>
           <div class="periodical"><em>Universidad de Puerto Rico, Recinto Río Piedras</em>, 2020</div>

@@ -186,3 +186,14 @@
 .citation-number {
   color: var(--global-theme-color);
 }
+
+// Section headings on the research page ("Work in Progress", "Other Work").
+// Defined here so both sections get identical spacing and rule treatment.
+.bibliography-heading {
+  color: var(--global-divider-color);
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
