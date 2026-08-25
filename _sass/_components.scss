@@ -90,48 +90,44 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// About page intro
+// About page
 
-// The bio and the profile photo sit in a two-column grid rather than
-// relying on a float. With a float, the shorter column's leftover height
-// pooled into a single dead band under the bio; centering the two columns
-// against each other splits that height evenly above and below instead.
+// Profile photo centered above a full-width bio, with the name and
+// subtitle centered to match. Header centering is scoped to .about-page
+// so the research, teaching, and CV headers stay left-aligned.
 // Markup lives in _layouts/about.liquid.
 
-.about-intro {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.about-page .post-header {
+  text-align: center;
+}
 
-  .profile {
-    width: 100%;
+.about-profile {
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+
+  figure {
     margin: 0;
-    order: -1; // photo sits above the bio once the columns stack
   }
 
-  .about-intro-body > :last-child {
-    margin-bottom: 0;
+  img {
+    width: 100%;
+  }
+
+  .more-info {
+    margin-top: 0.6rem;
+    font-family: monospace;
+
+    p {
+      display: block;
+      margin: 0;
+    }
   }
 }
 
 @media (min-width: 576px) {
-  .about-intro {
-    grid-template-columns: 1fr 30%;
-    gap: 1.5rem;
-    align-items: center;
-
-    .profile {
-      order: 0;
-    }
-  }
-
-  .about-intro.about-intro-left {
-    grid-template-columns: 30% 1fr;
-
-    .profile {
-      order: -1;
-    }
+  .about-profile {
+    width: 34%;
   }
 }
 
