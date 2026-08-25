@@ -125,21 +125,13 @@
       "name": "Programming",
       "level": "",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "R",
-        "Stata",
-        "Python",
-        "GIS"
-      ]
+      "keywords": ["R", "Stata", "Python", "GIS"]
     },
     {
       "name": "Languages",
       "level": "",
       "icon": "fa-solid fa-language",
-      "keywords": [
-        "Spanish (native)",
-        "English (fluent)"
-      ]
+      "keywords": ["Spanish (native)", "English (fluent)"]
     }
   ],
   "languages": [
