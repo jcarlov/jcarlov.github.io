@@ -33,9 +33,6 @@ ninja.data = [{
         },{id: "news-serving-as-president-of-the-graduate-economics-union-geu-at-the-university-of-toronto",
           title: 'Serving as President of the Graduate Economics Union (GEU) at the University of...',
           description: "",
-          section: "News",},{id: "news-scheduled-to-present-at-the-canadian-economic-association-annual-conference-2026",
-          title: 'Scheduled to present at the Canadian Economic Association Annual Conference, 2026.',
-          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
