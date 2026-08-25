@@ -90,6 +90,51 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// About page intro
+
+// The bio and the profile photo sit in a two-column grid rather than
+// relying on a float. With a float, the shorter column's leftover height
+// pooled into a single dead band under the bio; centering the two columns
+// against each other splits that height evenly above and below instead.
+// Markup lives in _layouts/about.liquid.
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .profile {
+    width: 100%;
+    margin: 0;
+    order: -1; // photo sits above the bio once the columns stack
+  }
+
+  .about-intro-body > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .about-intro {
+    grid-template-columns: 1fr 30%;
+    gap: 1.5rem;
+    align-items: center;
+
+    .profile {
+      order: 0;
+    }
+  }
+
+  .about-intro.about-intro-left {
+    grid-template-columns: 30% 1fr;
+
+    .profile {
+      order: -1;
+    }
+  }
+}
+
 // CV
 
 .cv {
