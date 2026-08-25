@@ -190,7 +190,10 @@
 // Section headings on the research page ("Work in Progress", "Other Work").
 // Defined here so both sections get identical spacing and rule treatment.
 .bibliography-heading {
-  color: var(--global-divider-color);
+  // Not the divider colour: at rgba(0,0,0,0.1) the heading was ~1.3:1
+  // against the page and effectively invisible. The rule below it still
+  // uses the divider colour, which is what that token is for.
+  color: var(--global-text-color);
   border-top: 1px solid var(--global-divider-color);
   font-size: 1.5rem;
   padding-top: 1rem;
