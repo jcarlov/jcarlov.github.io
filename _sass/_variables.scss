@@ -43,21 +43,26 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — morning haze over the river
-$ground-light: #e6ebe3 !default; // limewashed green-grey, the paintings' atmosphere
-$ground-light-raised: #eef1ea !default; // cards lifting off the ground
-$ink: #212a24 !default; // pine black
-$ink-muted: #5b6659 !default;
+// Light — the river itself
+//
+// The ground is a pale tint of the water in La Ceiba de Ponce. Sampling the
+// bottom third of that painting and setting the sandbank aside, the water sits
+// at hue ~140 (#496b4f, #557f65, #8fa695); the first pass at this palette used
+// hue ~96, which is why it still read as a yellow-grey rather than as water.
+$ground-light: #d9e7e0 !default; // celadon, the water lifted to a readable page
+$ground-light-raised: #e3ece7 !default; // cards lifting off the ground
+$ink: #1f2a23 !default; // pine black
+$ink-muted: #55635a !default;
 $verde: #2f6144 !default; // Oller's deep foliage green — links and accents
-$verde-pale: #8fbb9d !default; // the same green thinned for dark grounds
+$verde-pale: #8dbda4 !default; // the same green thinned for dark grounds
 $terracotta: #8a5334 !default; // the roof and the river bank
 $terracotta-pale: #c98f63 !default;
 
 // Dark — the same garden at night
-$ground-dark: #171d19 !default;
-$ground-dark-raised: #1e2521 !default;
-$ink-inverse: #c8d2c5 !default;
-$ink-inverse-muted: #8b968a !default;
+$ground-dark: #141b17 !default;
+$ground-dark-raised: #1b241f !default;
+$ink-inverse: #c5d2c9 !default;
+$ink-inverse-muted: #87958c !default;
 
 // Theme colors
 
