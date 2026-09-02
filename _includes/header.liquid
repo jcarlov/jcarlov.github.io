@@ -117,6 +117,23 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+
+          {% comment %}
+            CV is the PDF itself, not a page. It is hard-coded here rather than
+            driven by a page in _pages/ because the nav loop is built from real
+            pages, and a stub page would still publish an empty /cv/ URL. It
+            sits after the loop, which puts it last — where nav_order 4 had it.
+          {% endcomment %}
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/assets/pdf/cv.pdf' | relative_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
+          </li>
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
