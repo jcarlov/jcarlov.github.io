@@ -5,15 +5,16 @@ title: research
 description: Research papers and work in progress.
 nav: true
 nav_order: 2
+plate:
+  path: assets/img/oller_ceiba_de_ponce.jpg
+  wide: true
+  alt: Francisco Oller, La Ceiba de Ponce (1888), detail
+  caption: Francisco Oller, <em>La Ceiba de Ponce</em> (1888), detail. Museo de Arte de Ponce.
 ---
 
 <!-- _pages/publications.md -->
 
 <!-- Bibsearch Feature -->
-
-<div class="page-plate page-plate--wide">
-  {% include figure.liquid loading="eager" path="assets/img/oller_ceiba_de_ponce.jpg" class="img-fluid rounded" sizes="(min-width: 930px) 420px, (min-width: 576px) 45vw, 85vw" alt="Francisco Oller, La Ceiba de Ponce (1888), detail" caption="Francisco Oller, <em>La Ceiba de Ponce</em> (1888), detail. Museo de Arte de Ponce." %}
-</div>
 
 {% include bib_search.liquid %}
 

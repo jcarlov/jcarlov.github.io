@@ -5,13 +5,12 @@ title: teaching
 description: Courses I have been a Teaching Assistant for at the University of Toronto.
 nav: true
 nav_order: 3
+plate:
+  path: assets/img/landscape_with_palms.jpg
+  alt: Landscape with palms and a wooded path
+  # TODO: confirm this painting's title and attribution, then add:
+  # caption: ...
 ---
-
-<!-- TODO: confirm the painting's title and attribution, then fill in caption="..." below. -->
-
-<div class="page-plate">
-  {% include figure.liquid loading="eager" path="assets/img/landscape_with_palms.jpg" class="img-fluid rounded" sizes="(min-width: 930px) 280px, (min-width: 576px) 30vw, 70vw" alt="Landscape with palms and a wooded path" %}
-</div>
 
 ## University of Toronto, Department of Economics
 
