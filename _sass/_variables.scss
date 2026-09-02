@@ -43,10 +43,11 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — limestone and sea
+// Light — riverbed and sea
 //
-// Ground and ink are the riverbank in La Ceiba de Ponce (hue ~49: #d8cfb0,
-// #c7bf9a) — a plaster wall, warm and greyed. Nothing in the page *chrome* is
+// The ground is the riverbed in La Ceiba de Ponce — not the dry bank (hue ~49,
+// #c4bc98) but the wet strip where the water runs over it (hue ~55, #b7b491,
+// #9ea382): greyer, a little deeper, mineral rather than sandy. Nothing in the page *chrome* is
 // green any more: an earlier pass had a green-black ink, green hairlines and a
 // sky wash that blended green over the warm ground (the top of every page
 // measured #dcded6, green-dominant). The green now lives only in the paintings
@@ -54,8 +55,8 @@ $black-color: #2c3138 !default;
 $sky: #9fc5d2 !default;
 $sand: #d8cfb0 !default;
 
-$ground-light: #e6e3d8 !default; // limewashed plaster
-$ground-light-raised: #eeece4 !default; // cards lifting off the wall
+$ground-light: #e2e0d5 !default; // the riverbed: wet ochre, greyer and deeper than dry sand
+$ground-light-raised: #ebebe5 !default; // cards lifting off the bed
 $ink: #2b2823 !default; // warm charcoal, no green cast
 $ink-muted: #635f57 !default;
 $sea: #1d5a75 !default; // the sky, deepened — links and accents

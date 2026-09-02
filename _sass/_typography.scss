@@ -4,6 +4,67 @@
 
 @use "variables" as v;
 
+// -----------------------------------------------------------------------------
+// Type — tropical modernism
+//
+// A geometric sans for display (Jost, out of Futura's lineage) set light and
+// tracked out a little, against a neutral grotesque for reading (Inter). The
+// theme previously ran on Roboto/Roboto Slab, which is what made it read as
+// generic; the geometry is what carries the architectural feel.
+//
+// main.css loads after MDB, so these win at equal specificity without !important.
+// The monospace affiliation block on the about page is deliberately left alone —
+// it reads like the annotation on a drawing.
+// -----------------------------------------------------------------------------
+
+:root {
+  --font-display: "Jost", "Futura", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.015em;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.navbar .nav-item .nav-link {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+// Page titles carry the most air: light, large, barely tracked.
+.post-title {
+  font-weight: 300;
+  letter-spacing: 0.005em;
+}
+
+.bibliography-heading {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
 p,
 h1,
 h2,
