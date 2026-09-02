@@ -182,16 +182,37 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 2rem;
   }
 
-  .post-description {
-    margin-bottom: 0;
+  // One section-heading language across research and teaching. Matching plain
+  // `article h2` means the teaching page keeps working in ordinary markdown —
+  // no class to remember when a course is added.
+  article h2,
+  .bibliography-heading {
+    color: var(--global-text-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
   }
 
   // The first section rule would otherwise sit a few pixels under the masthead
   // rule and read as a double line.
+  article h2:first-of-type,
   .bibliography-heading:first-of-type {
     border-top: 0;
     padding-top: 0;
     margin-top: 0;
+  }
+
+  article ul {
+    padding-left: 1.1rem;
+  }
+
+  article li {
+    margin-bottom: 0.35rem;
   }
 }
 

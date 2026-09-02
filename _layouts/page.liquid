@@ -30,7 +30,14 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
+    {% comment %}
+      A plated page's masthead is the painting, the title and the rule — the
+      description would be a third line of chrome before any content. It stays
+      in front matter because head.liquid still uses it for the meta tag.
+    {% endcomment %}
+    {% unless page.plate %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endunless %}
   </header>
 
   <article>

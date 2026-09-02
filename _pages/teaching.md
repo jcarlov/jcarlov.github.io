@@ -12,15 +12,13 @@ plate:
   # caption: ...
 ---
 
-## University of Toronto, Department of Economics
-
-### Teaching Assistant
+## teaching assistant
 
 - ECO364: International Trade -- Winter 2026, 2024-25
 - ECO403: Economic Development -- Fall 2025
 - ECO421: International Trade Policy -- Fall 2025
 
-### Grader
+## grading
 
 - ECO102: Introductory Macroeconomics -- Summer 2025, 2024-25, 2023-24
 - ECO324: Economic Development -- 2023-24, 2022-23
