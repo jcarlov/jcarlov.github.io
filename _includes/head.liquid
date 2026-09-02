@@ -74,7 +74,18 @@
 {% elsif site.icon != blank %}
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+{% comment %}
+  Not `bust_css_cache`: that filter hashes a source file at assets/css/main.css,
+  which does not exist — the stylesheet is compiled from main.scss — so it was
+  hashing nothing and emitting d41d8cd9…, the MD5 of the empty string, on every
+  build. The URL never changed, and with Pages serving max-age=600 a browser
+  kept stale CSS for ten minutes after each deploy.
+
+  site.time is the build timestamp, so this changes exactly when the site is
+  rebuilt and the CSS is actually re-fetched then. The other stylesheets are
+  real files on disk and hash correctly, so they keep bust_file_cache.
+{% endcomment %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
