@@ -1,14 +1,9 @@
 name: Render a CV
+# Manual-only. This has failed on every run since March 2026 (RenderCV schema
+# validation on empty fields), nothing on the live site consumes its output, and
+# the CV is now a checked-in PDF rather than a rendered page. On push it was only
+# ever adding a red X to unrelated commits.
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
   workflow_call:
   workflow_dispatch:
 permissions:
