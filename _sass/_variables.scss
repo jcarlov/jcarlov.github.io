@@ -43,16 +43,16 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — the house on the far bank
+// Light — the house on the far bank, in shade
 //
-// Not the sand this time but the stucco of the house in La Ceiba de Ponce:
-// #eed9ca and #e5d8c9, hue 25-32, a warm pink-cream rather than the bank's
-// yellow hue 46. Lighter than the sand ground and, because it keeps real
-// saturation at hue 28, still a colour — the near-neutral hue-40 cream at 9%
-// saturation is the one every template ships with, and this is a long way from
-// it. Sea and foliage both sit well against a warm pink ground.
-$ground-light: #e7ddd3 !default; // the house wall
-$ground-light-raised: #efe7de !default;
+// The stucco of the house in La Ceiba de Ponce (#eed9ca, #e5d8c9, hue 25-32)
+// taken at full strength read as pink. The useful measure is the spread between
+// the red and blue channels: the generic template cream sits at 4, the previous
+// ground at 20, which is where a tint stops being a cast and starts being a
+// colour. This is 10 — warm and unmistakably not grey, but a wash rather than a
+// pink. Going further would land back on the near-neutral cream.
+$ground-light: #ece6e2 !default; // the house wall, subtly
+$ground-light-raised: #f3efec !default;
 $ink: #2b2823 !default;
 $ink-muted: #5a5449 !default;
 $sea: #1d5a75 !default; // the water, deepened — links and accents
