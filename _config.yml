@@ -54,7 +54,7 @@ external_services:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false # ⌘K palette: three pages and a PDF do not need a search index
 socials_in_search: true
 posts_in_search: true
 bib_search: false
