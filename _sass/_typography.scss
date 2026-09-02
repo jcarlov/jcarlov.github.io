@@ -5,30 +5,22 @@
 @use "variables" as v;
 
 // -----------------------------------------------------------------------------
-// Type — gallery label
+// Type — one grotesque, doing everything
 //
-// Jost (out of Futura's lineage) for display, set thin, small and tracked out,
-// the way a wall label under a painting is set; Inter for reading. The theme
-// shipped on Roboto/Roboto Slab, which is most of why it read as a template.
-//
-// Sizes are deliberately small and weights light — but only for *display*.
-// Body copy stays at 400 and full size: thin small text on a light ground is
-// where this kind of styling usually stops being legible.
-//
-// main.css loads after MDB, so these win at equal specificity without
-// !important. The monospace affiliation block on the about page is left alone;
-// it reads like the annotation on a drawing.
+// Jost was geometric to the point of being bubbly. This is a single neutral
+// grotesque across the whole site, with weight and size — not tracking, not a
+// second family — carrying the hierarchy. Straightforward is the point.
 // -----------------------------------------------------------------------------
 
 :root {
-  --font-display: "Jost", "Futura", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: var(--font-body);
 }
 
 body {
   font-family: var(--font-body);
-  font-size: 0.97rem;
-  line-height: 1.7;
+  font-size: 0.94rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,34 +33,31 @@ h5,
 h6,
 .post-title,
 .navbar-brand {
-  font-family: var(--font-display);
-  font-weight: 300;
-  letter-spacing: 0.03em;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
-// Page titles: the thinnest thing on the page, and no larger than they need
-// to be. The weight is what makes them read as elegant rather than the size.
 .post-title {
-  font-weight: 200;
-  font-size: 2.1rem;
-  letter-spacing: 0.05em;
+  font-weight: 300;
+  font-size: 1.9rem;
+  letter-spacing: -0.01em;
 }
 
-// About-page name: Bootstrap sets .font-weight-bold to 700!important, which
-// would drop a bold slab into the middle of a 200-weight line.
+// Bootstrap sets .font-weight-bold to 700!important, which would drop a bold
+// slab into the middle of the about page's 300-weight name.
 .post-title .font-weight-bold {
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
 
 .navbar-brand {
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .navbar .nav-item .nav-link {
-  font-family: var(--font-display);
-  font-weight: 300;
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 p,

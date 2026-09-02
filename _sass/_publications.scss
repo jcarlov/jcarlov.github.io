@@ -101,25 +101,25 @@
       }
 
       .links {
-        // Outlined buttons were the last Bootstrap-looking thing on the page.
-        // Set as small tracked links they read as apparatus, not controls.
+        // These are controls, not apparatus — the abstract toggles open in
+        // place — so they keep a border. Small, square and quiet, but a button.
         a.btn {
           color: var(--global-text-color-light);
           background-color: transparent;
-          border: 0;
-          border-radius: 0;
+          border: 1px solid var(--global-divider-color);
+          border-radius: 2px;
           box-shadow: none;
-          padding: 0 1.1rem 0 0;
+          padding: 0.15rem 0.5rem;
+          margin-right: 0.35rem;
           margin-left: 0;
-          font-family: var(--font-display);
-          font-size: 0.75rem;
-          font-weight: 400;
-          letter-spacing: 0.12em;
+          font-size: 0.7rem;
+          font-weight: 500;
+          letter-spacing: 0.04em;
           text-transform: lowercase;
 
           &:hover {
             color: var(--global-theme-color);
-            border: 0;
+            border-color: var(--global-theme-color);
             background-color: transparent;
           }
         }
@@ -205,9 +205,5 @@
   // against the page and effectively invisible. The rule below it still
   // uses the divider colour, which is what that token is for.
   color: var(--global-text-color);
-  border-top: 1px solid var(--global-divider-color);
-  font-size: 1.5rem;
-  padding-top: 1rem;
-  margin-top: 2.5rem;
   margin-bottom: 0;
 }

@@ -139,31 +139,31 @@ ul.task-list input[type="checkbox"] {
 
 // Section headings
 //
-// One treatment on every page — research, teaching, about, cv — so the site
-// reads as one thing. Set like a wall label: small, tracked out, lowercase,
-// over a hairline. Matching plain `article h2` as well as the bibliography
-// class means the teaching page keeps working in ordinary markdown, with no
-// class to remember when a course is added.
+// One treatment on every page — research, teaching, about, cv. Small, lowercase
+// and semibold, with space above doing the separating instead of a rule. The
+// hairlines under every heading were reading as ruled stationery; on a page
+// this quiet, whitespace is enough. Matching plain `article h2` as well as the
+// bibliography class means the teaching page keeps working in ordinary
+// markdown, with no class to remember when a course is added.
 
 .post article h2,
 .bibliography-heading {
   color: var(--global-text-color);
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-transform: lowercase;
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 1.1rem;
-  margin-top: 3rem;
-  margin-bottom: 1.2rem;
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 2.75rem;
+  margin-bottom: 0.9rem;
 }
 
 .post article h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  margin-top: 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
 }
 
 .post article ul {
@@ -171,7 +171,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 .post article li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 // Page plates
@@ -183,7 +183,7 @@ ul.task-list input[type="checkbox"] {
 // _pages/publications.md and _pages/teaching.md.
 
 .page-plate {
-  width: 30%;
+  width: 40%;
   margin: 0 auto 2.25rem;
 
   figure {
@@ -207,24 +207,18 @@ ul.task-list input[type="checkbox"] {
 }
 
 .page-plate--wide {
-  width: 45%;
+  width: 60%;
 }
 
 // On a plated page the image, the title and a hairline read as one masthead,
 // with the content beginning cleanly beneath it.
 .post.has-plate {
   .post-header {
-    padding-bottom: 1.1rem;
-    border-bottom: 1px solid var(--global-divider-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
   }
 
-  // The first section rule would otherwise sit a few pixels under the masthead
-  // rule and read as a double line.
   article h2:first-of-type,
   .bibliography-heading:first-of-type {
-    border-top: 0;
-    padding-top: 0;
     margin-top: 0;
   }
 
@@ -265,13 +259,8 @@ ul.task-list input[type="checkbox"] {
     .list-group-item {
       background-color: transparent;
       border: 0;
-      border-top: 1px solid var(--global-divider-color);
       padding-left: 0;
       padding-right: 0;
-
-      &:first-child {
-        border-top: 0;
-      }
     }
   }
 
@@ -291,20 +280,16 @@ ul.task-list input[type="checkbox"] {
   // Section titles here are h3.card-title, not `article h2`, so they have to be
   // named explicitly to join the same treatment as every other page.
   .card-title {
-    font-family: var(--font-display);
-    font-size: 0.95rem;
-    font-weight: 400 !important;
-    letter-spacing: 0.16em;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
     text-transform: lowercase;
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1.1rem;
     margin-top: 2.25rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.9rem;
   }
 
   .card:first-of-type .card-title {
-    border-top: 0;
-    padding-top: 0;
     margin-top: 0;
   }
 
