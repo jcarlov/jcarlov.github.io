@@ -43,19 +43,26 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — the river itself
+// Light — limestone, with the sea kept for accents
 //
-// The ground is a pale tint of the water in La Ceiba de Ponce. Sampling the
-// bottom third of that painting and setting the sandbank aside, the water sits
-// at hue ~140 (#496b4f, #557f65, #8fa695); the first pass at this palette used
-// hue ~96, which is why it still read as a yellow-grey rather than as water.
-$ground-light: #d9e7e0 !default; // celadon, the water lifted to a readable page
-$ground-light-raised: #e3ece7 !default; // cards lifting off the ground
-$ink: #1f2a23 !default; // pine black
-$ink-muted: #55635a !default;
-$verde: #2f6144 !default; // Oller's deep foliage green — links and accents
-$verde-pale: #8dbda4 !default; // the same green thinned for dark grounds
-$terracotta: #8a5334 !default; // the roof and the river bank
+// Sampled from La Ceiba de Ponce: the riverbank at hue ~49 (#d8cfb0, #c7bf9a),
+// the sky at hue ~195 (#9fc5d2), the water at hue ~145 (#537c5f). The ground is
+// the bank — a plaster/limestone tone, warm but greyed so it reads as a wall
+// rather than as paper. Sea and foliage stay as accents; when the green was in
+// the ground itself the whole lower half of the page drifted green.
+$sky: #9fc5d2 !default;
+$sand: #d8cfb0 !default;
+$water: #537c5f !default;
+
+$ground-light: #e6e3d8 !default; // limewashed plaster
+$ground-light-raised: #eeece4 !default; // cards lifting off the wall
+$ink: #1f2a23 !default; // pine black, the green kept in the text
+$ink-muted: #5c6157 !default;
+$teal: #1f5c6b !default; // sea — links and accents
+$teal-pale: #8fc0cc !default;
+$verde: #405f45 !default; // foliage — rules and structure
+$verde-pale: #8dbda4 !default;
+$terracotta: #8a5334 !default; // the roof
 $terracotta-pale: #c98f63 !default;
 
 // Dark — the same garden at night
