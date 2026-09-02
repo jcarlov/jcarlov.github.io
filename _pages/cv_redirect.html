@@ -1,0 +1,27 @@
+---
+layout: none
+permalink: /cv/
+sitemap: false
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV</title>
+    <!--
+      /cv/ used to be a rendered page. It is now the PDF itself, but the old URL
+      may be in papers, email signatures and department listings, so it stays as
+      a redirect rather than a 404. GitHub Pages cannot serve a real 301 without
+      a plugin, hence the meta refresh; the canonical link tells crawlers where
+      the document actually lives, and the visible link covers refresh being
+      blocked.
+    -->
+    <link rel="canonical" href="{{ '/assets/pdf/cv.pdf' | absolute_url }}" />
+    <meta http-equiv="refresh" content="0; url={{ '/assets/pdf/cv.pdf' | relative_url }}" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <p>The CV is now a PDF: <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}">cv.pdf</a>.</p>
+  </body>
+</html>

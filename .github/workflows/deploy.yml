@@ -64,6 +64,14 @@ on:
 permissions:
   contents: write
 
+# Two pushes in quick succession raced here once: both builds reported success,
+# but the older one finished pushing to gh-pages six seconds after the newer one
+# and silently overwrote it, so the site served a stale build behind a green
+# check. One deploy at a time per branch, newest wins.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
