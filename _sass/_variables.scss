@@ -43,37 +43,35 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — riverbed and sea
+// Light — a museum wall
 //
-// The ground is the riverbed in La Ceiba de Ponce — not the dry bank (hue ~49,
-// #c4bc98) but the wet strip where the water runs over it (hue ~55, #b7b491,
-// #9ea382): greyer, a little deeper, mineral rather than sandy. Nothing in the page *chrome* is
-// green any more: an earlier pass had a green-black ink, green hairlines and a
-// sky wash that blended green over the warm ground (the top of every page
-// measured #dcded6, green-dominant). The green now lives only in the paintings
-// themselves. The accent is the sky, kept firmly on the blue side of teal.
+// Not a colour sampled from the painting: a wall to hang it on. Successive
+// passes at tinting the ground (water, then sand, then riverbed) each ended up
+// competing with the paintings — the sand ones read as cream, the green ones
+// read as green. A gallery hangs landscape work on a low-saturation grey for
+// exactly this reason, and a faint cool cast (hue ~205, saturation 8%) sits
+// under the foliage and sky of both plates without arguing with either.
 $sky: #9fc5d2 !default;
-$sand: #d8cfb0 !default;
 
-$ground-light: #e2e0d5 !default; // the riverbed: wet ochre, greyer and deeper than dry sand
-$ground-light-raised: #ebebe5 !default; // cards lifting off the bed
-$ink: #2b2823 !default; // warm charcoal, no green cast
-$ink-muted: #635f57 !default;
-$sea: #1d5a75 !default; // the sky, deepened — links and accents
-$sea-pale: #8fc0cc !default; // the same, thinned for dark grounds
-$sand-line: #8a7a52 !default; // warm hairlines, the bank's own colour
-$terracotta: #8a5334 !default; // the roof
+$ground-light: #dbdee0 !default; // museum grey
+$ground-light-raised: #e9eaeb !default;
+$ink: #262a2b !default; // neutral charcoal — a warm one goes muddy on a cool ground
+$ink-muted: #565c5f !default;
+$sea: #1d5a75 !default; // the painting's sky, deepened — links
+$sea-pale: #8fc0cc !default;
+$hairline: #6b7376 !default; // rules, at low alpha
+$terracotta: #8a5334 !default;
 $terracotta-pale: #c98f63 !default;
 
-// Dark — the same wall at night, warm charcoal rather than green-black
-$ground-dark: #1b1a17 !default;
-$ground-dark-raised: #232120 !default;
-$ink-inverse: #d5d0c4 !default;
-$ink-inverse-muted: #949084 !default;
+// Dark — the same wall at night
+$ground-dark: #17191a !default;
+$ground-dark-raised: #1f2223 !default;
+$ink-inverse: #cfd3d4 !default;
+$ink-inverse-muted: #8d9295 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($sea, 0.06);
+$code-bg-color-light: rgba($sea, 0.05);
 $code-bg-color-dark: $ground-dark-raised !default;
 
 // Font awesome location

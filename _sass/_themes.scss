@@ -17,7 +17,7 @@
   --global-footer-text-color: #{v.$ink-inverse-muted};
   --global-footer-link-color: #{v.$ink-inverse};
   --global-distill-app-color: #{v.$ink-muted};
-  --global-divider-color: #{rgba(v.$sand-line, 0.34)};
+  --global-divider-color: #{rgba(v.$hairline, 0.32)};
   --global-card-bg-color: #{v.$ground-light-raised};
   --global-nav-bg-color: #{rgba(v.$ground-light, 0.72)};
   --global-highlight-color: #{v.$terracotta};
@@ -26,10 +26,9 @@
   --global-newsletter-bg-color: #{v.$ground-light-raised};
   --global-newsletter-text-color: #{v.$ink};
 
-  // A warm light at the head of the page and nothing else — the previous sky
-  // wash blended green over the warm ground, which is exactly what made the
-  // top of every page read green. Fades to fully transparent so the end of its
-  // 1200px leaves no seam.
+  // A colourless light at the head of the page. Any tint here ends up
+  // fighting the plates, which is the whole reason the ground is grey.
+  // Fades to fully transparent so the end of its 1200px leaves no seam.
   --global-ground-wash: linear-gradient(180deg, #{rgba(#fffdf6, 0.55)} 0%, #{rgba(#fffdf6, 0.18)} 38%, #{rgba(#fffdf6, 0)} 100%);
   --global-grain: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.9%27%20numOctaves%3D%274%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.05%27%2F%3E%3C%2Fsvg%3E");
 
