@@ -7,6 +7,12 @@ nav: true
 nav_order: 3
 ---
 
+<!-- TODO: confirm the painting's title and attribution, then fill in caption="..." below. -->
+
+<div class="page-plate">
+  {% include figure.liquid loading="eager" path="assets/img/landscape_with_palms.jpg" class="img-fluid rounded" sizes="(min-width: 930px) 280px, (min-width: 576px) 30vw, 70vw" alt="Landscape with palms and a wooded path" %}
+</div>
+
 ## University of Toronto, Department of Economics
 
 ### Teaching Assistant

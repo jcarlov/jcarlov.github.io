@@ -137,6 +137,52 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Page plates
+//
+// One painting at the head of the research and teaching pages. Sized to sit at
+// the same optical weight as the profile photo on the about page: a portrait
+// plate takes the profile's 30% column, a landscape plate a little more, so the
+// two read as the same size rather than the same width. Markup lives in
+// _pages/publications.md and _pages/teaching.md.
+
+.page-plate {
+  width: 30%;
+  margin: 0 auto 2.25rem;
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .caption {
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+  }
+}
+
+.page-plate--wide {
+  width: 45%;
+}
+
+@media (max-width: 575.98px) {
+  .page-plate {
+    width: 70%;
+  }
+
+  .page-plate--wide {
+    width: 85%;
+  }
+}
+
 // CV
 
 .cv {
