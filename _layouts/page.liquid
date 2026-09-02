@@ -17,9 +17,9 @@ layout: default
   {% if page.plate %}
     <div class="page-plate{% if page.plate.wide %} page-plate--wide{% endif %}">
       {% if page.plate.wide %}
-        {% assign plate_sizes = '(min-width: 720px) 432px, (min-width: 576px) 60vw, 85vw' %}
+        {% assign plate_sizes = '(min-width: 660px) 396px, (min-width: 576px) 60vw, 85vw' %}
       {% else %}
-        {% assign plate_sizes = '(min-width: 720px) 288px, (min-width: 576px) 40vw, 70vw' %}
+        {% assign plate_sizes = '(min-width: 660px) 264px, (min-width: 576px) 40vw, 70vw' %}
       {% endif %}
       {%
         include figure.liquid loading="eager" path=page.plate.path class="img-fluid rounded"

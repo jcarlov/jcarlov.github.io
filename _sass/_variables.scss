@@ -43,25 +43,26 @@ $black-color: #2c3138 !default;
 // river bank in La Ceiba de Ponce.
 // -----------------------------------------------------------------------------
 
-// Light — sand and sea
+// Light — the house on the far bank
 //
-// The bank in La Ceiba de Ponce is #c7bf9a (hue ~46, saturation 24%). Held at
-// that saturation and lifted only to L 82% it stays a sand — a colour. Earlier
-// passes lifted it to L 88% and desaturated it, which is the recipe for the
-// pale warm off-white every template ships with. The accent is the sky from
-// the same painting, deepened: sand to sea, the two ends of the picture.
-$ground-light: #e0d9c5 !default; // sand, at the painting's own saturation
-$ground-light-raised: #e8e2d2 !default;
-$ink: #2b2823 !default; // warm charcoal, to sit on a warm ground
+// Not the sand this time but the stucco of the house in La Ceiba de Ponce:
+// #eed9ca and #e5d8c9, hue 25-32, a warm pink-cream rather than the bank's
+// yellow hue 46. Lighter than the sand ground and, because it keeps real
+// saturation at hue 28, still a colour — the near-neutral hue-40 cream at 9%
+// saturation is the one every template ships with, and this is a long way from
+// it. Sea and foliage both sit well against a warm pink ground.
+$ground-light: #e7ddd3 !default; // the house wall
+$ground-light-raised: #efe7de !default;
+$ink: #2b2823 !default;
 $ink-muted: #5a5449 !default;
-$sea: #1d5a75 !default; // the sky, deepened — links and accents
+$sea: #1d5a75 !default; // the water, deepened — links and accents
 $sea-pale: #8fc0cc !default;
-$hairline: #8a7f68 !default; // borders on the few things that still need one
-$terracotta: #8a5334 !default;
+$hairline: #8a7f68 !default;
+$terracotta: #8a5334 !default; // the roof
 $terracotta-pale: #c98f63 !default;
 
 // Dark — the same ground at night
-$ground-dark: #1a1815 !default;
+$ground-dark: #1b1917 !default;
 $ground-dark-raised: #221f1b !default;
 $ink-inverse: #d6d0c3 !default;
 $ink-inverse-muted: #948d80 !default;
