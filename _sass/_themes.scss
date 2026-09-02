@@ -13,9 +13,14 @@
   --global-theme-color: #{v.$sea};
   --global-hover-color: #{v.$sea};
   --global-hover-text-color: #{v.$ground-light-raised};
-  --global-footer-bg-color: #{v.$ground-dark};
-  --global-footer-text-color: #{v.$ink-inverse-muted};
-  --global-footer-link-color: #{v.$ink-inverse};
+  // The footer was an inverted bar — dark in light mode, bright in dark mode —
+  // which made it the loudest element on a site that is otherwise ground and
+  // space. It sits on the ground now, in muted text. It stays opaque rather
+  // than transparent because it is fixed to the viewport and content scrolls
+  // behind it.
+  --global-footer-bg-color: #{v.$ground-light};
+  --global-footer-text-color: #{v.$ink-muted};
+  --global-footer-link-color: #{v.$ink};
   --global-distill-app-color: #{v.$ink-muted};
   --global-divider-color: #{rgba(v.$hairline, 0.32)};
   --global-card-bg-color: #{v.$ground-light-raised};
@@ -85,9 +90,9 @@ html[data-theme="dark"] {
   --global-theme-color: #{v.$sea-pale};
   --global-hover-color: #{v.$sea-pale};
   --global-hover-text-color: #{v.$ground-dark};
-  --global-footer-bg-color: #{v.$ink-inverse};
-  --global-footer-text-color: #{v.$ground-dark};
-  --global-footer-link-color: #{v.$ink};
+  --global-footer-bg-color: #{v.$ground-dark};
+  --global-footer-text-color: #{v.$ink-inverse-muted};
+  --global-footer-link-color: #{v.$ink-inverse};
   --global-distill-app-color: #{v.$ink-inverse};
   --global-divider-color: #{rgba(v.$ink-inverse, 0.16)};
   --global-card-bg-color: #{v.$ground-dark-raised};

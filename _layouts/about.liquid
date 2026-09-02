@@ -66,10 +66,32 @@ layout: default
 
     <!-- Social -->
     {% if page.social %}
+      {% comment %}
+        Text rather than the icon row {% social_links %} produces. Four
+        1.8rem glyphs were the heaviest thing on a page otherwise made of
+        small type and space, and a word is clearer than a logo besides.
+        Driven from the same _data/socials.yml the plugin reads, so adding a
+        service there still only needs a line here.
+      {% endcomment %}
       <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
+        <div class="contact-links">
+          {% if site.data.socials.email %}
+            <a href="mailto:{{ site.data.socials.email }}">email</a>
+          {% endif %}
+          {% if site.data.socials.github_username %}
+            <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">github</a>
+          {% endif %}
+          {% if site.data.socials.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">linkedin</a>
+          {% endif %}
+          {% if site.data.socials.bluesky_url %}
+            <a href="{{ site.data.socials.bluesky_url }}" target="_blank" rel="noopener noreferrer">bluesky</a>
+          {% endif %}
+        </div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
+        {% if site.contact_note %}
+          <div class="contact-note">{{ site.contact_note }}</div>
+        {% endif %}
       </div>
     {% endif %}
 

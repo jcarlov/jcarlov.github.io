@@ -4,7 +4,9 @@
 
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+  // Same register as the social links above it: small, quiet, no rule.
+  font-size: 0.7rem;
+  letter-spacing: 0.01em;
 
   .container {
     color: var(--global-footer-text-color);
