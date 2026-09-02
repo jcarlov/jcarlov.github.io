@@ -110,8 +110,15 @@ ul.task-list input[type="checkbox"] {
     margin: 0;
   }
 
+  // Framed exactly like the painting plates — square corners, hairline, the
+  // same soft shadow — so every image on the site is hung the same way.
+  // Bootstrap's .rounded and MDB's .z-depth-1 are off the markup in
+  // _layouts/about.liquid, so nothing puts the radius or the heavy shadow back.
   img {
     width: 100%;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    box-shadow: 0 1px 14px rgba(0, 0, 0, 0.08);
   }
 
   // Affiliation block: bold and tightly set so the three lines read as
