@@ -32,10 +32,37 @@ $grey-900: #252930;
 $white-color: #f0efec !default;
 $black-color: #2c3138 !default;
 
+// -----------------------------------------------------------------------------
+// Oller palette
+//
+// Sampled from the two Francisco Oller landscapes used as page plates. The
+// previous ground was a warm sand (#f0efec) — the same cream that every
+// academic template and chat UI ships with, which is why the site kept reading
+// as generic. These are the paintings' own colours instead: the cool, humid
+// green-grey of their air, a pine-black ink, and the terracotta of the roof and
+// river bank in La Ceiba de Ponce.
+// -----------------------------------------------------------------------------
+
+// Light — morning haze over the river
+$ground-light: #e6ebe3 !default; // limewashed green-grey, the paintings' atmosphere
+$ground-light-raised: #eef1ea !default; // cards lifting off the ground
+$ink: #212a24 !default; // pine black
+$ink-muted: #5b6659 !default;
+$verde: #2f6144 !default; // Oller's deep foliage green — links and accents
+$verde-pale: #8fbb9d !default; // the same green thinned for dark grounds
+$terracotta: #8a5334 !default; // the roof and the river bank
+$terracotta-pale: #c98f63 !default;
+
+// Dark — the same garden at night
+$ground-dark: #171d19 !default;
+$ground-dark-raised: #1e2521 !default;
+$ink-inverse: #c8d2c5 !default;
+$ink-inverse-muted: #8b968a !default;
+
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: rgba($verde, 0.06);
+$code-bg-color-dark: $ground-dark-raised !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

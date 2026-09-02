@@ -9,6 +9,22 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
+  // Paper ground, painted in three layers: a fine grain on top, then the two
+  // gradients that make up --global-ground-wash (a light falling from the top
+  // of the page, and a faint deepening at the foot of it), then the flat
+  // colour above. The repeat/size lists carry one entry per layer, so if the
+  // wash in _themes.scss gains or loses a gradient, both lists move with it.
+  //
+  // No `background-attachment: fixed` on purpose: it stutters badly on iOS,
+  // and letting the wash size to the document is what puts the light at the
+  // top of the *page* rather than following the viewport down the scroll.
+  background-image: var(--global-grain), var(--global-ground-wash);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size:
+    160px 160px,
+    100% 100%,
+    100% 100%;
+
   h1,
   h2,
   h3,

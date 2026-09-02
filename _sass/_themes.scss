@@ -6,29 +6,32 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #{v.$white-color};
+  --global-bg-color: #{v.$ground-light};
   --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$purple-color};
-  --global-hover-color: #{v.$purple-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-dark};
-  --global-footer-text-color: #{v.$grey-color-light};
-  --global-footer-link-color: #{v.$white-color};
-  --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{v.$white-color};
-  --global-highlight-color: #{v.$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$black-color, "red", v.$space: rgb)},
-    #{color.channel(v.$black-color, "green", v.$space: rgb)},
-    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
-    0.4
-  );
-  --global-back-to-top-text-color: #{v.$white-color};
-  --global-newsletter-bg-color: #{v.$white-color};
-  --global-newsletter-text-color: #{v.$black-color};
+  --global-text-color: #{v.$ink};
+  --global-text-color-light: #{v.$ink-muted};
+  --global-theme-color: #{v.$verde};
+  --global-hover-color: #{v.$verde};
+  --global-hover-text-color: #{v.$ground-light-raised};
+  --global-footer-bg-color: #{v.$ground-dark};
+  --global-footer-text-color: #{v.$ink-inverse-muted};
+  --global-footer-link-color: #{v.$ink-inverse};
+  --global-distill-app-color: #{v.$ink-muted};
+  --global-divider-color: #{rgba(v.$ink, 0.14)};
+  --global-card-bg-color: #{v.$ground-light-raised};
+  --global-highlight-color: #{v.$terracotta};
+  --global-back-to-top-bg-color: #{rgba(v.$ink, 0.4)};
+  --global-back-to-top-text-color: #{v.$ground-light-raised};
+  --global-newsletter-bg-color: #{v.$ground-light-raised};
+  --global-newsletter-text-color: #{v.$ink};
+
+  // Paper ground: light falling from the top of the page, and a fine tooth of
+  // grain so the background reads as a washed surface rather than a flat hex.
+  // Both are painted by `body` in _layout.scss.
+  --global-ground-wash:
+    radial-gradient(120% 75% at 50% -10%, #{rgba(#ffffff, 0.85)} 0%, #{rgba(#ffffff, 0)} 55%),
+    linear-gradient(180deg, #{rgba(v.$verde, 0)} 55%, #{rgba(v.$verde, 0.07)} 100%);
+  --global-grain: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.9%27%20numOctaves%3D%274%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.05%27%2F%3E%3C%2Fsvg%3E");
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -76,28 +79,31 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
+  --global-bg-color: #{v.$ground-dark};
   --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
-  --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{v.$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$white-color, "red", v.$space: rgb)},
-    #{color.channel(v.$white-color, "green", v.$space: rgb)},
-    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
-    0.5
-  );
-  --global-back-to-top-text-color: #{v.$black-color};
-  --global-newsletter-bg-color: #{v.$grey-color-light};
-  --global-newsletter-text-color: #{v.$grey-color-dark};
+  --global-text-color: #{v.$ink-inverse};
+  --global-text-color-light: #{v.$ink-inverse-muted};
+  --global-theme-color: #{v.$verde-pale};
+  --global-hover-color: #{v.$verde-pale};
+  --global-hover-text-color: #{v.$ground-dark};
+  --global-footer-bg-color: #{v.$ink-inverse};
+  --global-footer-text-color: #{v.$ground-dark};
+  --global-footer-link-color: #{v.$ink};
+  --global-distill-app-color: #{v.$ink-inverse};
+  --global-divider-color: #{rgba(v.$ink-inverse, 0.16)};
+  --global-card-bg-color: #{v.$ground-dark-raised};
+  --global-highlight-color: #{v.$terracotta-pale};
+  --global-back-to-top-bg-color: #{rgba(v.$ink-inverse, 0.5)};
+  --global-back-to-top-text-color: #{v.$ground-dark};
+  --global-newsletter-bg-color: #{v.$ink-inverse};
+  --global-newsletter-text-color: #{v.$ground-dark};
+
+  // Same ground after dark: a little moonlight at the top, grain slightly
+  // stronger because noise reads weaker against a dark surface.
+  --global-ground-wash:
+    radial-gradient(120% 75% at 50% -10%, #{rgba(v.$verde-pale, 0.1)} 0%, #{rgba(v.$verde-pale, 0)} 55%),
+    linear-gradient(180deg, #{rgba(#000000, 0)} 55%, #{rgba(#000000, 0.28)} 100%);
+  --global-grain: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27160%27%20height%3D%27160%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.9%27%20numOctaves%3D%274%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.07%27%2F%3E%3C%2Fsvg%3E");
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
