@@ -12,12 +12,6 @@ plate:
   caption: Francisco Oller, <em>La Ceiba de Ponce</em> (1888), detail. Museo de Arte de Ponce.
 ---
 
-<!-- _pages/publications.md -->
-
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
-
 <h2 class="bibliography-heading">Work in Progress</h2>
 
 <div class="publications">
