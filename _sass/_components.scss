@@ -173,6 +173,28 @@ ul.task-list input[type="checkbox"] {
   width: 45%;
 }
 
+// On a plated page the image, the title and a hairline read as one masthead,
+// with the content beginning cleanly beneath it.
+.post.has-plate {
+  .post-header {
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 2rem;
+  }
+
+  .post-description {
+    margin-bottom: 0;
+  }
+
+  // The first section rule would otherwise sit a few pixels under the masthead
+  // rule and read as a double line.
+  .bibliography-heading:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 575.98px) {
   .page-plate {
     width: 70%;

@@ -8,7 +8,7 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
+<div class="post{% if page.plate %} has-plate{% endif %}">
   {% comment %}
     An optional painting at the head of the page, set above the title so the
     image reads as the plate and the title as its caption line. Declared in
