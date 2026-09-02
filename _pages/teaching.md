@@ -6,10 +6,9 @@ description: Courses I have been a Teaching Assistant for at the University of T
 nav: true
 nav_order: 3
 plate:
-  path: assets/img/landscape_with_palms.jpg
-  alt: Landscape with palms and a wooded path
-  # TODO: confirm this painting's title and attribution, then add:
-  # caption: ...
+  path: assets/img/oller_landscape_with_royal_palm.jpg
+  alt: Francisco Oller, Landscape with Royal Palm (c. 1897)
+  caption: Francisco Oller, <em>Landscape with Royal Palm</em> (c. 1897). Ateneo Puertorriqueño, San Juan.
 ---
 
 ## teaching assistant
