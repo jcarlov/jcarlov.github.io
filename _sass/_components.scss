@@ -183,7 +183,7 @@ ul.task-list input[type="checkbox"] {
 // _pages/publications.md and _pages/teaching.md.
 
 .page-plate {
-  width: 40%;
+  width: 55%;
   margin: 0 auto 2.25rem;
 
   figure {
@@ -192,8 +192,10 @@ ul.task-list input[type="checkbox"] {
 
   img {
     width: 100%;
+    // Square, not rounded: a picture on a wall has corners. Bootstrap's
+    // `.rounded` is off the markup too, so nothing puts them back.
     border: 1px solid var(--global-divider-color);
-    border-radius: 2px;
+    border-radius: 0;
     box-shadow: 0 1px 14px rgba(0, 0, 0, 0.08);
   }
 
@@ -207,7 +209,7 @@ ul.task-list input[type="checkbox"] {
 }
 
 .page-plate--wide {
-  width: 60%;
+  width: 78%;
 }
 
 // On a plated page the image, the title and a hairline read as one masthead,
@@ -233,11 +235,11 @@ ul.task-list input[type="checkbox"] {
 
 @media (max-width: 575.98px) {
   .page-plate {
-    width: 70%;
+    width: 78%;
   }
 
   .page-plate--wide {
-    width: 85%;
+    width: 92%;
   }
 }
 
