@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Draft — updated periodically.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "news-serving-as-president-of-the-graduate-economics-union-geu-at-the-university-of-toronto",
           title: 'Serving as President of the Graduate Economics Union (GEU) at the University of...',
           description: "",
