@@ -33,43 +33,35 @@ $white-color: #f0efec !default;
 $black-color: #2c3138 !default;
 
 // -----------------------------------------------------------------------------
-// Oller palette
+// Rice paper and the seal
 //
-// Sampled from the two Francisco Oller landscapes used as page plates. The
-// previous ground was a warm sand (#f0efec) — the same cream that every
-// academic template and chat UI ships with, which is why the site kept reading
-// as generic. These are the paintings' own colours instead: the cool, humid
-// green-grey of their air, a pine-black ink, and the terracotta of the roof and
-// river bank in La Ceiba de Ponce.
+// Every tinted ground tried here — sand, house wall, riverbed, celadon — read
+// as one more cream academic template, because a pale tint is exactly what
+// those templates ship. The page is rice paper instead: nearly white, with its
+// fibres showing (assets/img/washi.svg, laid over the ground in _themes.scss).
+// Sumi ink for the type, and one colour: the vermilion of a hanko seal, which
+// is also the flamboyán in bloom. It marks only what can be clicked, so the
+// paintings remain the only colour field on the page.
 // -----------------------------------------------------------------------------
 
-// Light — the house on the far bank, in shade
-//
-// The stucco of the house in La Ceiba de Ponce (#eed9ca, #e5d8c9, hue 25-32)
-// taken at full strength read as pink. The useful measure is the spread between
-// the red and blue channels: the generic template cream sits at 4, the previous
-// ground at 20, which is where a tint stops being a cast and starts being a
-// colour. This is 10 — warm and unmistakably not grey, but a wash rather than a
-// pink. Going further would land back on the near-neutral cream.
-$ground-light: #ece6e2 !default; // the house wall, subtly
-$ground-light-raised: #f3efec !default;
-$ink: #2b2823 !default;
-$ink-muted: #5a5449 !default;
-$sea: #1d5a75 !default; // the water, deepened — links and accents
-$sea-pale: #8fc0cc !default;
+// Light — paper
+$ground-light: #f4f4ef !default; // rice paper
+$ground-light-raised: #fafaf7 !default;
+$ink: #262a26 !default; // sumi
+$ink-muted: #575c55 !default;
 $hairline: #8a7f68 !default;
-$terracotta: #8a5334 !default; // the roof
-$terracotta-pale: #c98f63 !default;
+$flamboyan: #b0402a !default; // the seal — links and accents, 5.3:1 on the paper
 
-// Dark — the same ground at night
+// Dark — the same paper at night
 $ground-dark: #1b1917 !default;
 $ground-dark-raised: #221f1b !default;
 $ink-inverse: #d6d0c3 !default;
 $ink-inverse-muted: #948d80 !default;
+$flamboyan-pale: #e58a6c !default; // 6.8:1 on the dark ground
 
 // Theme colors
 
-$code-bg-color-light: rgba($sea, 0.05);
+$code-bg-color-light: rgba($ink, 0.04);
 $code-bg-color-dark: $ground-dark-raised !default;
 
 // Font awesome location
