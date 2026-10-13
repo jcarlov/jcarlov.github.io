@@ -33,31 +33,29 @@ $white-color: #f0efec !default;
 $black-color: #2c3138 !default;
 
 // -----------------------------------------------------------------------------
-// Rice paper and the seal
+// Blanco by day, jardim by night
 //
-// Every tinted ground tried here — sand, house wall, riverbed, celadon — read
-// as one more cream academic template, because a pale tint is exactly what
-// those templates ship. The page is rice paper instead: nearly white, with its
-// fibres showing (assets/img/washi.svg, laid over the ground in _themes.scss).
-// Sumi ink for the type, and one colour: the vermilion of a hanko seal, which
-// is also the flamboyán in bloom. It marks only what can be clicked, so the
-// paintings remain the only colour field on the page.
+// After a long run of pale tints and a textured rice paper, the grounds are
+// plain colour with nothing laid over them. By day the page is nearly white,
+// so the paintings are the only colour field, and one palm green from Oller's
+// foliage marks what can be clicked. By night the page is the garden itself:
+// a deep jungle green the plates glow against, cream type, mango links.
 // -----------------------------------------------------------------------------
 
-// Light — paper
-$ground-light: #f4f4ef !default; // rice paper
-$ground-light-raised: #fafaf7 !default;
-$ink: #262a26 !default; // sumi
-$ink-muted: #575c55 !default;
-$hairline: #8a7f68 !default;
-$flamboyan: #b0402a !default; // the seal — links and accents, 5.3:1 on the paper
+// Light — blanco
+$ground-light: #fbfaf7 !default;
+$ground-light-raised: #ffffff !default;
+$ink: #22251f !default; // 14.9:1 on blanco
+$ink-muted: #555a52 !default; // 6.8:1
+$hairline: #7d8577 !default;
+$palm: #2b6040 !default; // links and accents, 7.1:1
 
-// Dark — the same paper at night
-$ground-dark: #1b1917 !default;
-$ground-dark-raised: #221f1b !default;
-$ink-inverse: #d6d0c3 !default;
-$ink-inverse-muted: #948d80 !default;
-$flamboyan-pale: #e58a6c !default; // 6.8:1 on the dark ground
+// Dark — jardim
+$ground-dark: #1f2e26 !default;
+$ground-dark-raised: #29382f !default;
+$ink-inverse: #e7e3d4 !default; // 11.1:1 on jardim
+$ink-inverse-muted: #a9ad9c !default; // 6.2:1
+$mango: #e8a86a !default; // links and accents, 6.9:1
 
 // Theme colors
 
