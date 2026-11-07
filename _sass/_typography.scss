@@ -62,13 +62,17 @@ h6,
   letter-spacing: -0.022em;
 }
 
-// Measure. The prose column ran 87-90 characters at the old 15px, well past
-// the 60-75 that a line can be read without the eye losing its place on the
-// return sweep. Capped on the prose itself rather than on $max-content-width,
-// so the plates, tables and the publication list keep the full column.
+// Measure. The prose column is 630px, which at 16px Inter is about 79
+// average characters -- the upper edge of the 60-75 a line wants, not the
+// 87-90 first estimated from too narrow a per-character figure. Note that
+// `ch` is the width of "0", 0.629em in Inter, so it runs wider than an
+// average character: a 68ch cap resolved to 684px and never bound at all.
+// 57ch is ~574px, which does bind, and lands the line near 72 characters.
+// Capped on the prose rather than on $max-content-width, so the plates,
+// tables and the publication list keep the full column.
 .about-bio p,
 .post article p {
-  max-width: 68ch;
+  max-width: 57ch;
 }
 
 // Bootstrap sets .font-weight-bold to 700!important, which would drop a bold

@@ -155,12 +155,17 @@ ul.task-list input[type="checkbox"] {
 
 .post article h2,
 .bibliography-heading {
-  color: var(--global-text-color);
+  // Lowercase at 0.02em was already a label rather than a heading, which is
+  // the right instinct -- it just read as quiet body text rather than as a
+  // label. Caps opened to 0.15em and dropped to the muted ink says the same
+  // thing more clearly, and it is the one place tracking opens rather than
+  // tightens. The structural properties below are unchanged.
+  color: var(--global-text-color-light);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   border-top: 0;
   padding-top: 0;
   margin-top: 2.75rem;
