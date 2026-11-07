@@ -11,7 +11,7 @@
   --global-text-color: #{v.$ink};
   --global-text-color-light: #{v.$ink-muted};
   --global-theme-color: #{v.$palm};
-  --global-hover-color: #{v.$palm};
+  --global-hover-color: #{v.$ochre};
   --global-hover-text-color: #{v.$ground-light-raised};
   // The footer was an inverted bar — dark in light mode, bright in dark mode —
   // which made it the loudest element on a site that is otherwise ground and
@@ -81,7 +81,7 @@ html[data-theme="dark"] {
   --global-code-bg-color: #{v.$code-bg-color-dark};
   --global-text-color: #{v.$ink-inverse};
   --global-text-color-light: #{v.$ink-inverse-muted};
-  --global-theme-color: #{v.$mango};
+  --global-theme-color: #{v.$palm-light};
   --global-hover-color: #{v.$mango};
   --global-hover-text-color: #{v.$ground-dark};
   --global-footer-bg-color: #{v.$ground-dark};
@@ -91,7 +91,7 @@ html[data-theme="dark"] {
   --global-divider-color: #{rgba(v.$ink-inverse, 0.16)};
   --global-card-bg-color: #{v.$ground-dark-raised};
   --global-nav-bg-color: #{rgba(v.$ground-dark, 0.72)};
-  --global-highlight-color: #{v.$mango};
+  --global-highlight-color: #{v.$palm-light};
   --global-back-to-top-bg-color: #{rgba(v.$ink-inverse, 0.5)};
   --global-back-to-top-text-color: #{v.$ground-dark};
   --global-newsletter-bg-color: #{v.$ink-inverse};

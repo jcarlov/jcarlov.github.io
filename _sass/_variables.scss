@@ -37,25 +37,35 @@ $black-color: #2c3138 !default;
 //
 // After a long run of pale tints and a textured rice paper, the grounds are
 // plain colour with nothing laid over them. By day the page is nearly white,
-// so the paintings are the only colour field, and one palm green from Oller's
-// foliage marks what can be clicked. By night the page is the garden itself:
-// a deep jungle green the plates glow against, cream type, mango links.
+// so the paintings are the only colour field. By night the page is the garden
+// itself: a deep jungle green the plates glow against, cream type.
+//
+// One hue carries the site. The green is the ground by night and the ink by
+// day -- $ink and $ground-dark are deliberately the same value, so the text
+// you read by day is the surface you read on by night. Green marks what can
+// be clicked in both themes; mango was doing that job at night, which swung
+// the accent 114 degrees of hue between themes and left the green belonging
+// to neither. Mango now answers the pointer instead: $ochre by day, $mango
+// by night, hover only. Links carry an underline because colour alone put
+// them 2.1:1 against body text, under the 3:1 a non-text cue needs.
 // -----------------------------------------------------------------------------
 
 // Light — blanco
 $ground-light: #fbfaf7 !default;
 $ground-light-raised: #ffffff !default;
-$ink: #22251f !default; // 14.9:1 on blanco
-$ink-muted: #555a52 !default; // 6.8:1
+$ink: #1f2e26 !default; // = $ground-dark, on purpose. 13.6:1 on blanco
+$ink-muted: #4f5d55 !default; // 6.6:1
 $hairline: #7d8577 !default;
-$palm: #2b6040 !default; // links and accents, 7.1:1
+$palm: #2b6040 !default; // links, 7.1:1
+$ochre: #9c5f1e !default; // hover, a dark sibling of $mango. 4.9:1
 
 // Dark — jardim
 $ground-dark: #1f2e26 !default;
 $ground-dark-raised: #29382f !default;
 $ink-inverse: #e7e3d4 !default; // 11.1:1 on jardim
 $ink-inverse-muted: #a9ad9c !default; // 6.2:1
-$mango: #e8a86a !default; // links and accents, 6.9:1
+$palm-light: #98c3a9 !default; // links, 7.3:1
+$mango: #e8a86a !default; // hover, 6.9:1
 
 // Theme colors
 
