@@ -38,6 +38,7 @@
 
     li {
       margin-bottom: 1rem;
+      font-variant-numeric: tabular-nums;
 
       .preview {
         display: inline-block;
@@ -69,8 +70,14 @@
 
       .title {
         // `bolder` against a 400 body was a heavy slab at the top of every
-        // entry. Medium is enough to lead the entry on a page this quiet.
-        font-weight: 500;
+        // entry, and 500 was still doing the leading by weight alone. The
+        // serif leads it by family and size now, so the weight comes back
+        // down -- a 500 Spectral at this size reads as emphasis, not a name.
+        font-family: var(--font-display);
+        font-size: 1.1875rem;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -0.012em;
       }
 
       .author {
@@ -145,10 +152,14 @@
       }
 
       .hidden {
-        font-size: 0.875rem;
+        // Was 0.875rem/300 with 1.4 leading and justified, which made the
+        // longest prose on the site the hardest to read: justification with
+        // no hyphenation opens rivers at this measure, and long lines need
+        // more leading, not less, because the return sweep is further.
+        font-size: 0.9375rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        text-align: left;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -156,8 +167,9 @@
         transition: all 0.15s ease;
 
         p {
-          line-height: 1.4em;
+          line-height: 1.65;
           margin: 10px;
+          max-width: 68ch;
         }
 
         pre {
@@ -204,6 +216,16 @@
   // Not the divider colour: at rgba(0,0,0,0.1) the heading was ~1.3:1
   // against the page and effectively invisible. The rule below it still
   // uses the divider colour, which is what that token is for.
-  color: var(--global-text-color);
+  //
+  // It also used to inherit an h2 that computed to 13.6px against a 15px
+  // body -- a label smaller than the thing it labelled. Small caps, tracked
+  // out, in the muted ink: it reads as a label now instead of a weak
+  // heading, and it is the one place tracking opens rather than tightens.
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
   margin-bottom: 0;
 }
