@@ -62,6 +62,26 @@ h6,
   letter-spacing: -0.022em;
 }
 
+// Underlines, but only where a link sits inside running text. Green against
+// body text is 2.1:1 by day and 1.6:1 at night, under the 3:1 that lets
+// colour alone mark a link, so prose links need a second cue. Navigation,
+// the footer and the buttons under each entry are unambiguous as links from
+// position alone -- underlining those put a rule under every item in the
+// navbar, which is noise rather than accessibility.
+.post article a:not(.btn),
+.about-bio a:not(.btn),
+blockquote a,
+table.table a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
+
+// Author links carry a dashed rule of their own; two rules is one too many.
+.publications ol.bibliography li .author a {
+  text-decoration: none;
+}
+
 // Measure. The prose column is 630px, which at 16px Inter is about 79
 // average characters -- the upper edge of the 60-75 a line wants, not the
 // 87-90 first estimated from too narrow a per-character figure. Note that
@@ -125,12 +145,6 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
-  // Green against body text is 2.1:1 by day and 1.6:1 at night, under the
-  // 3:1 that lets colour alone mark a link. The underline is what marks it;
-  // the colour is identity, and the hover is the only warm thing here.
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 2px;
 
   &:hover {
     color: var(--global-hover-color);
