@@ -202,7 +202,13 @@ ul.task-list input[type="checkbox"] {
   // caption stays 9px off the image because the label belongs to the work,
   // and the gaps either side of that pair open up so the plate and its
   // label read as one thing with a pause around it.
-  margin: 2rem auto 3.5rem;
+  //
+  // The space above is padding, not margin. As a margin it collapsed into
+  // the `.mt-5` on the container above it -- the larger of the two wins, so
+  // 2rem of margin bought nothing and the gap stayed at 45px. Padding does
+  // not collapse.
+  margin: 0 auto 3.5rem;
+  padding-top: 2rem;
 
   figure {
     margin: 0;
