@@ -196,7 +196,13 @@ ul.task-list input[type="checkbox"] {
 
 .page-plate {
   width: 48%;
-  margin: 0 auto 2.25rem;
+  // A wall, not a column. The plate had 45px of air above it and 36px below,
+  // which hangs the painting in the flow of the page rather than giving it
+  // room. What makes it read as hung is the ratio, not the totals: the
+  // caption stays 9px off the image because the label belongs to the work,
+  // and the gaps either side of that pair open up so the plate and its
+  // label read as one thing with a pause around it.
+  margin: 2rem auto 3.5rem;
 
   figure {
     margin: 0;
@@ -228,7 +234,7 @@ ul.task-list input[type="checkbox"] {
 // with the content beginning cleanly beneath it.
 .post.has-plate {
   .post-header {
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.25rem;
   }
 
   article h2:first-of-type,
