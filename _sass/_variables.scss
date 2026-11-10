@@ -51,7 +51,18 @@ $black-color: #2c3138 !default;
 // -----------------------------------------------------------------------------
 
 // Light — blanco
-$ground-light: #fbfaf7 !default;
+//
+// White, not the old #fbfaf7. That was four points warm (251,250,247) and
+// at 97.6% lightness there was nowhere to go but the remaining 2.4%: the
+// whole move is dE 1.8, which reads side by side and barely otherwise.
+// What does the work is dropping the warm cast, so the page goes crisp
+// rather than brighter, and the plates get a colder field to sit against.
+//
+// There is no surface above white, so $ground-light-raised is the same
+// value now. Its only live consumer is the colour of the text inside the
+// journal badge in _publications.scss; a card, if one is ever added, needs
+// a border to be seen rather than a lighter fill.
+$ground-light: #ffffff !default;
 $ground-light-raised: #ffffff !default;
 $ink: #1f2e26 !default; // = $ground-dark, on purpose. 13.6:1 on blanco
 $ink-muted: #4f5d55 !default; // 6.6:1
