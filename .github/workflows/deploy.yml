@@ -82,7 +82,10 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          # Series, not a patch: ubuntu-latest moved to 26.04 and only the
+          # latest patch of each series is built for newer runner images, so
+          # the pinned patch 404s and the job dies at Setup Ruby.
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
