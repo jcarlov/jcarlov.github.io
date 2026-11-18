@@ -22,9 +22,12 @@
   The fifth is simply gone. .z-depth-0 and .z-depth-1 are still in the markup
   -- they are inert now, and harmless -- because nothing needed them: our own
   rules already set the shadow on the portrait and on the buttons under each
-  entry. .z-depth-0 was `box-shadow: none !important`, which also suppressed
-  Bootstrap's focus ring, so dropping it gives the abstract and PDF buttons a
-  visible keyboard focus state back.
+  entry. Dropping .z-depth-0 does not, on its own, hand Bootstrap's focus ring
+  back to those buttons -- our own `box-shadow: none` outranks .btn:focus the
+  same way MDB's !important did -- so _sass/_publications.scss now draws the
+  ring explicitly. Separately, the `abs` toggles are <a> elements with no href
+  and so are not keyboard-reachable at all; that is al-folio's markup and is
+  not addressed here.
 {% endcomment %}
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
 

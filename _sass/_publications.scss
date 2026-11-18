@@ -140,6 +140,19 @@
             border-color: var(--global-theme-color);
             background-color: transparent;
           }
+
+          // Bootstrap sets `outline: 0` on .btn:focus and draws the ring as a
+          // box-shadow instead. The `box-shadow: none` above outranks it --
+          // (0,4,3) against (0,2,0) -- so these buttons had no visible focus
+          // state at all. MDB's .z-depth-0 was suppressing the same ring with
+          // !important, so removing MDB did not hand it back; it has to be
+          // drawn. In the site's green rather than Bootstrap's blue, and on
+          // :focus-visible so a mouse click does not leave a ring behind.
+          &:focus-visible {
+            outline: 2px solid var(--global-theme-color);
+            outline-offset: 2px;
+            box-shadow: none;
+          }
         }
 
         a.award.btn {
