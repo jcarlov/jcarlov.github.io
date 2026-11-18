@@ -53,43 +53,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Profile
-
-.profile {
-  width: 100%;
-
-  .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
-
-    p {
-      display: inline-block;
-      margin: 0;
-    }
-  }
-}
-
-.profile.float-right {
-  margin-left: 1rem;
-}
-
-.profile.float-left {
-  margin-right: 1rem;
-}
-
-@media (min-width: 576px) {
-  .profile {
-    width: 30%;
-
-    .address {
-      p {
-        display: block;
-      }
-    }
-  }
-}
-
 // About page
 
 // Profile photo centered above a full-width bio, with the name and
@@ -292,45 +255,6 @@ ul.task-list input[type="checkbox"] {
 
   .page-plate--wide {
     width: 92%;
-  }
-}
-
-// Projects
-
-.projects {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      .card-title {
-        color: var(--global-theme-color);
-      }
-    }
-  }
-
-  .card {
-    img {
-      width: 100%;
-    }
-  }
-
-  .col {
-    padding-bottom: 1rem;
-  }
-
-  .grid-sizer,
-  .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
-  }
-
-  h2.category {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: right;
   }
 }
 
