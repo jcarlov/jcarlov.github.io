@@ -11,8 +11,9 @@
   beyond Bootstrap's own -- velocity, mdbTreeview and wow -- and this site
   calls none of them. Everything it does call (collapse and dropdown for the
   navbar, popover, scrollspy) comes from the Bootstrap 4.6.2 bundle below.
-  common.js even opens by stripping MDB's own `waves-effect` classes back off
-  every link, which is a fair summary of what it was contributing.
+  common.js used to open by stripping MDB's own `waves-effect` classes back
+  off every link, which is a fair summary of what it was contributing; that
+  line went with it.
 {% endcomment %}
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 

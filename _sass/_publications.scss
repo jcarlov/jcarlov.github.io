@@ -115,7 +115,11 @@
       .links {
         // These are controls, not apparatus — the abstract toggles open in
         // place — so they keep a border. Small, square and quiet, but a button.
-        a.btn {
+        // `.btn` rather than `a.btn`: the abstract, award and bibtex toggles
+        // are <button> elements now, while DOI, PDF and the rest are still
+        // anchors. Both wear .btn and both must look identical -- the markup
+        // difference is about what the control is, not how it reads.
+        .btn {
           color: var(--global-text-color-light);
           background-color: transparent;
           border: 1px solid var(--global-divider-color);
@@ -155,7 +159,7 @@
           }
         }
 
-        a.award.btn {
+        .award.btn {
           border-color: var(--global-highlight-color);
         }
       }

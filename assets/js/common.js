@@ -1,21 +1,39 @@
 $(document).ready(function () {
-  // add toggle functionality to abstract, award and bibtex buttons
-  $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
+  // Abstract, award and bibtex panels: at most one open per entry.
+  //
+  // These were <a role="button"> with no href, which meant no tabindex and so
+  // no place in the tab order at all -- the main control on the publications
+  // page could only be reached with a mouse. They are <button> elements now,
+  // which is why there is no keydown handling here: the browser gives Enter
+  // and Space to a real button for free, and a handler of our own would only
+  // be a second, worse implementation of it.
+  //
+  // What is still ours to do is aria-expanded, and it has to be resynced for
+  // the whole group rather than flipped on the button that was clicked:
+  // opening the abstract closes the award, so that button's state changes too
+  // even though nobody touched it.
+  var PANELS = ["abstract", "award", "bibtex"];
+
+  function syncExpanded($entry) {
+    PANELS.forEach(function (kind) {
+      var open = $entry.find("." + kind + ".hidden").hasClass("open");
+      $entry.find("button." + kind).attr("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  $("button.abstract, button.award, button.bibtex").click(function () {
+    var $entry = $(this).parent().parent();
+    var clicked = this;
+    PANELS.forEach(function (kind) {
+      var $panel = $entry.find("." + kind + ".hidden");
+      if (clicked.classList.contains(kind)) {
+        $panel.toggleClass("open");
+      } else {
+        $panel.filter(".open").removeClass("open");
+      }
+    });
+    syncExpanded($entry);
   });
-  $("a.award").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
-  });
-  $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".abstract.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
-  });
-  $("a").removeClass("waves-effect waves-light");
 
   // bootstrap-toc
   if ($("#toc-sidebar").length) {
