@@ -156,6 +156,18 @@ a,
 table.table a {
   color: var(--global-theme-color);
 
+  // MDB gave every link `transition: all .2s ease-in-out`, and the navbar
+  // links .35s from a second rule of its own. Both are gone with it, so the
+  // fade is declared here instead -- one duration everywhere rather than two
+  // a vendor happened to pick, and named properties rather than `all`, which
+  // would animate layout as well and is what makes a hover feel loose. The
+  // underline that grows under a navbar item keeps its own 0.3s in
+  // _navbar.scss; it is a different gesture and reads better slightly slower.
+  transition:
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+
   &:hover {
     color: var(--global-hover-color);
     text-decoration: underline;

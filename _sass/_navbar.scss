@@ -93,7 +93,14 @@
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    // Absolute, not `bolder`. A relative keyword resolves against whatever the
+    // parent weight happens to be, and that parent was MDB: it set .navbar to
+    // 300, so `bolder` landed on 400 and the active item was in fact marked by
+    // colour alone. With MDB gone the parent is 400, where `bolder` jumps to
+    // 700 and drops a bold slab into a navbar built at one weight. 400 is what
+    // the page has always rendered. The same trap is noted at the publication
+    // titles in _publications.scss.
+    font-weight: 400;
     color: var(--global-theme-color);
 
     &:hover {
@@ -140,6 +147,18 @@
 }
 
 .navbar-toggler {
+  // MDB zeroed Bootstrap's border and focus ring on the toggler. The border
+  // stays off -- the three bars are the control, a box around them is noise --
+  // but the ring comes back on :focus-visible only, so the hamburger is still
+  // reachable by keyboard without drawing an outline on every tap.
+  border: 0;
+  outline: 0;
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
   .icon-bar {
     display: block;
     width: 22px;
