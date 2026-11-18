@@ -126,7 +126,7 @@ ul.task-list input[type="checkbox"] {
     box-shadow: 0 1px 14px rgba(0, 0, 0, 0.08);
   }
 
-  // Off by default: `more_info` is empty in _pages/about.md, because the
+  // Off by default: `more_info` is not set in _pages/about.md, because the
   // department, the university and the city were already on the page -- once
   // in the subtitle under the name and once in the opening line of the bio.
   // Three statements of one fact is not emphasis, it is a stutter, so the
@@ -152,6 +152,17 @@ ul.task-list input[type="checkbox"] {
 @media (min-width: 576px) {
   .about-profile {
     width: 30%;
+  }
+}
+
+// On a phone the portrait was the one image on the site that went full
+// bleed: the painting plates drop to 72% below 576px, the portrait stayed
+// at 100% and filled the screen, which is the opposite of how it reads on
+// a desktop. Matched to the plates so it is hung the same way at every
+// width.
+@media (max-width: 575.98px) {
+  .about-profile {
+    width: 72%;
   }
 }
 
