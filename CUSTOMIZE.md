@@ -21,11 +21,6 @@ Here we will give you some tips on how to customize the website. One important t
     - [Backend](#backend)
     - [Build and Deployment](#build-and-deployment)
     - [Key Integration Points](#key-integration-points)
-  - [Modifying the CV information](#modifying-the-cv-information)
-    - [RenderCV Format (Recommended)](#rendercv-format-recommended)
-    - [JSONResume Format](#jsonresume-format)
-    - [Using Both Formats Simultaneously](#using-both-formats-simultaneously)
-    - [Automatic PDF Generation (RenderCV only)](#automatic-pdf-generation-rendercv-only)
   - [Modifying the user and repository information](#modifying-the-user-and-repository-information)
     - [Configuring external service URLs](#configuring-external-service-urls)
   - [Creating new pages](#creating-new-pages)
@@ -104,13 +99,12 @@ The project is structured as follows, focusing on the main components that you w
 .
 ├── 📂 assets/: contains the assets that are displayed in the website
 │   └── 📂 json/
-    │   └── 📄 resume.json: CV in JSON format (https://jsonresume.org/)
+    │   └── 📄 table_data.json: sample data for the tables in the template
 ├── 📂 _bibliography/
 │   └── 📄 papers.bib: bibliography in BibTeX format
 ├── 📂 _books/: contains the bookshelf pages
 ├── 📄 _config.yml: the configuration file of the template
 ├── 📂 _data/: contains some of the data used in the template
-│   ├── 📄 cv.yml: CV in YAML format, used when assets/json/resume.json is not found
 │   ├── 📄 repositories.yml: users and repositories info in YAML format
 │   └── 📄 socials.yml: your social media and contact info in YAML format
 ├── 📂 _includes/: contains code parts that are included in the main HTML file
@@ -124,8 +118,7 @@ The project is structured as follows, focusing on the main components that you w
 └── 📂 _sass/: contains the SASS files that define the style of the website
     ├── 📂 font-awesome/: contains the SCSS files for Font Awesome
     ├── 📄 _blog.scss: blog post, tags, and pagination styles
-    ├── 📄 _components.scss: reusable component styles (cards, profiles, CV, projects)
-    ├── 📄 _cv.scss: style of the CV page
+    ├── 📄 _components.scss: reusable component styles (cards, profiles, projects)
     ├── 📄 _distill.scss: style of the Distill articles
     ├── 📄 _footer.scss: footer styles
     ├── 📄 _layout.scss: overall layout styles
@@ -317,67 +310,6 @@ Understanding how these technologies work together will help you customize al-fo
 4. **Bibliography**: BibTeX files are processed by jekyll-scholar to generate publication pages
 5. **Static Site Generation**: Jekyll builds all files into static HTML
 6. **Deployment**: GitHub Actions automatically deploys the built site to GitHub Pages
-
-## Modifying the CV information
-
-Your CV can be created using one of two formats. Choose the format that works best for you, or use both simultaneously by switching between them:
-
-### RenderCV Format (Recommended)
-
-[`_data/cv.yml`](_data/cv.yml) uses the [RenderCV](https://rendercv.com/) YAML format, which is human-readable and designed specifically for generating professional resumes. This format also enables optional automatic PDF generation via GitHub Actions.
-
-**If you choose this format:**
-
-1. Edit your CV data in [`_data/cv.yml`](_data/cv.yml)
-2. Optionally customize how the PDF is styled by editing:
-   - [`assets/rendercv/design.yaml`](assets/rendercv/design.yaml) — Design and styling
-   - [`assets/rendercv/locale.yaml`](assets/rendercv/locale.yaml) — Localization and formatting
-   - [`assets/rendercv/settings.yaml`](assets/rendercv/settings.yaml) — RenderCV settings
-3. To display only this format, delete [`assets/json/resume.json`](assets/json/resume.json) (optional)
-
-### JSONResume Format
-
-[`assets/json/resume.json`](assets/json/resume.json) uses the [JSONResume](https://jsonresume.org/) standard format, which is compatible with other tools and services.
-
-**If you choose this format:**
-
-1. Edit your CV data in [`assets/json/resume.json`](assets/json/resume.json)
-2. To display only this format, delete [`_data/cv.yml`](_data/cv.yml) (optional)
-
-### Using Both Formats Simultaneously
-
-You can keep both [`_data/cv.yml`](_data/cv.yml) and [`assets/json/resume.json`](assets/json/resume.json) in your repository and switch between them on your website by setting the `cv_format` frontmatter variable in [`_pages/cv.md`](_pages/cv.md):
-
-```yaml
----
-layout: cv
-cv_format: rendercv # options: rendercv or jsonresume
----
-```
-
-Change `rendercv` to `jsonresume` to display the JSONResume format instead.
-
-### Automatic PDF Generation (RenderCV only)
-
-If you use the RenderCV format, a GitHub Actions workflow can automatically generate a PDF version of your CV whenever you push changes to [`_data/cv.yml`](_data/cv.yml). The PDF is saved to `assets/rendercv/rendercv_output/`.
-
-**To link the auto-generated PDF to your CV page:**
-
-Set the `cv_pdf` variable in the frontmatter of [`_pages/cv.md`](_pages/cv.md) to point to the generated PDF:
-
-```yaml
----
-layout: cv
-cv_pdf: /assets/rendercv/rendercv_output/CV.pdf
-cv_format: rendercv
----
-```
-
-This will add a download button on your CV page that links to the PDF. (The exact filename depends on your RenderCV settings—check the output directory after the first workflow run to see the generated PDF name.)
-
-**To disable automatic PDF generation:**
-
-Delete or comment out the [`.github/workflows/render-cv.yml`](.github/workflows/render-cv.yml) workflow file.
 
 ## Modifying the user and repository information
 

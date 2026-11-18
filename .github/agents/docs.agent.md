@@ -24,12 +24,10 @@ You are a documentation specialist for the al-folio Jekyll theme project.
   - `_projects/`, `_news/`, `_books/`, `_teachings/` – Jekyll collections
   - `_layouts/` – Liquid layouts for different page types
   - `_includes/` – Liquid template components:
-    - `_includes/cv/` – Unified CV component renderers (awards, education, experience, skills, languages, certificates, references, projects, interests, publications, etc.)
     - `_includes/repository/` – Repository display components
     - Core includes: header, footer, metadata, scripts, etc.
   - `_sass/` – SCSS stylesheets
   - `_data/` – YAML data files:
-    - `cv.yml` – CV/resume in RenderCV format
     - `socials.yml` – Social media links
     - `repositories.yml` – GitHub repositories
     - `coauthors.yml` – Coauthor information
@@ -38,15 +36,14 @@ You are a documentation specialist for the al-folio Jekyll theme project.
   - `_plugins/` – Custom Jekyll plugins for extended functionality
   - `_bibliography/` – BibTeX files for publications
   - `assets/` – Static assets:
-    - `assets/json/` – JSON files (resume.json in JSONResume format, table_data.json)
-    - `assets/rendercv/` – RenderCV configuration files and generated PDFs
+    - `assets/json/` – JSON files (table_data.json)
     - `assets/img/`, `assets/pdf/` – Images and PDFs
     - `assets/css/`, `assets/js/` – Custom stylesheets and scripts
     - `assets/fonts/`, `assets/webfonts/` – Font files
     - `assets/bibliography/`, `assets/libs/` – Support files
     - `assets/audio/`, `assets/video/`, `assets/jupyter/`, `assets/plotly/`, `assets/html/` – Multimedia and embedded content
   - `.github/` – GitHub configuration:
-  - `.github/workflows/` – GitHub Actions (deployment, CI/CD, CV PDF generation, link checking, code quality, Copilot environment setup)
+  - `.github/workflows/` – GitHub Actions (deployment, CI/CD, link checking, code quality, Copilot environment setup)
   - `.github/agents/` – AI agent configuration files (customize.agent.md, docs.agent.md)
   - `.github/instructions/` – Path-specific Copilot custom instructions for different file types
     - `.github/ISSUE_TEMPLATE/` – GitHub issue templates
@@ -79,7 +76,6 @@ You are a documentation specialist for the al-folio Jekyll theme project.
 
 - Reference well-documented configuration files rather than repeating their content
 - Example: "Configure your deployment settings in `_config.yml`. For Docker deployment, see `docker-compose.yml`"
-- When explaining CV features, point to both data sources: "The CV page is generated from `_data/cv.yml` (RenderCV format) or `assets/json/resume.json` (JSONResume format), which are kept in sync. A GitHub Actions workflow automatically generates a PDF from the RenderCV data."
 
 **Avoid UI descriptions:**
 
@@ -106,7 +102,7 @@ You are a documentation specialist for the al-folio Jekyll theme project.
 
 - `ANALYTICS.md` – Analytics and tracking configuration options
 - `CONTRIBUTING.md` – Guidelines for contributors and development
-- `CUSTOMIZE.md` – Comprehensive customization guide (configuration, adding content, styling, CV management, publications)
+- `CUSTOMIZE.md` – Comprehensive customization guide (configuration, adding content, styling, publications)
 - `FAQ.md` – Frequently asked questions and common issues
 - `INSTALL.md` – Installation and deployment instructions (Docker, GitHub Pages, local setup, upgrading)
 - `QUICKSTART.md` – Get started in 5 minutes (repository setup, personalization, deployment)
@@ -148,10 +144,9 @@ These instruction files help Copilot agents understand project-specific conventi
 
 1. **Update configuration documentation** when `_config.yml` changes
 2. **Document new features** added to the theme (new layouts, plugins, customization options)
-3. **Document CV workflow** – Explain how users choose between RenderCV and JSONResume formats, how to switch formats using frontmatter, and how optional automatic PDF generation works via GitHub Actions
-4. **Clarify installation steps** when deployment methods or dependencies change
-5. **Update troubleshooting** in FAQ when common issues arise
-6. **Maintain consistency** across all documentation files
+3. **Clarify installation steps** when deployment methods or dependencies change
+4. **Update troubleshooting** in FAQ when common issues arise
+5. **Maintain consistency** across all documentation files
 
 ## Common Technical Terms & Explanations
 
