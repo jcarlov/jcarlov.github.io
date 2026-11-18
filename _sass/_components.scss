@@ -99,11 +99,16 @@ ul.task-list input[type="checkbox"] {
 
 .about-page .post-header {
   text-align: center;
+  // The name and its one line of affiliation are a wall label: set tight to
+  // each other, with a real pause before the portrait underneath. At the
+  // theme's default the subtitle sat 16px off the photo, which read as the
+  // caption running into the picture.
+  margin-bottom: 2.5rem;
 }
 
 .about-profile {
   width: 100%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;
   text-align: center;
 
   figure {
@@ -121,15 +126,21 @@ ul.task-list input[type="checkbox"] {
     box-shadow: 0 1px 14px rgba(0, 0, 0, 0.08);
   }
 
-  // Affiliation block: bold and tightly set so the three lines read as
-  // one unit, clearly separate from the bio prose below.
+  // Off by default: `more_info` is empty in _pages/about.md, because the
+  // department, the university and the city were already on the page -- once
+  // in the subtitle under the name and once in the opening line of the bio.
+  // Three statements of one fact is not emphasis, it is a stutter, so the
+  // subtitle keeps it and this block stands down.
+  //
+  // Kept styled rather than deleted so that putting `more_info` back is a
+  // front-matter edit and not a redesign. It was bold monospace, the only
+  // third typeface and the heaviest weight anywhere on the site; it now
+  // speaks in the same quiet register as the plate captions.
   .more-info {
-    margin-top: 0.85rem;
-    font-family: monospace;
-    font-weight: 700;
-    font-size: 0.9rem;
-    line-height: 1.35;
-    letter-spacing: 0.01em;
+    margin-top: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
 
     p {
       display: block;
@@ -168,22 +179,32 @@ ul.task-list input[type="checkbox"] {
   text-transform: uppercase;
   border-top: 0;
   padding-top: 0;
-  margin-top: 2.75rem;
-  margin-bottom: 0.9rem;
+  // A label belongs to what comes after it, so the space above is more than
+  // twice the space below -- 56px opens the section, 24px keeps the label
+  // attached to it. Paired with `.publications { margin-top }`, which these
+  // collapse against, so the gap under a label is 24px on every page.
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .post article h3 {
   font-size: 0.9rem;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .post article ul {
   padding-left: 1.1rem;
 }
 
-.post article li {
-  margin-bottom: 0.3rem;
+// Scoped to bullet and numbered lists written in markdown. Unscoped, this
+// also matched `ol.bibliography li` -- at equal specificity to the rule in
+// _publications.scss and loading after it, so it quietly won, and every
+// entry on the research page sat 5.6px from the next instead of its own
+// margin. Course lists want a little air between lines too.
+.post article ul li,
+.post article ol:not(.bibliography) li {
+  margin-bottom: 0.5rem;
 }
 
 // Page plates
@@ -240,7 +261,7 @@ ul.task-list input[type="checkbox"] {
 // with the content beginning cleanly beneath it.
 .post.has-plate {
   .post-header {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.75rem;
   }
 
   article h2:first-of-type,
@@ -248,13 +269,9 @@ ul.task-list input[type="checkbox"] {
     margin-top: 0;
   }
 
-  article ul {
-    padding-left: 1.1rem;
-  }
-
-  article li {
-    margin-bottom: 0.35rem;
-  }
+  // `article ul` and `article li` were repeated here at the values the
+  // unplated rules already set, so they did nothing but outrank the
+  // bibliography's own spacing. Removed; the rules above cover both pages.
 }
 
 @media (max-width: 575.98px) {
@@ -411,7 +428,10 @@ ul.task-list input[type="checkbox"] {
 
 .social {
   text-align: center;
-  margin-top: 2.5rem;
+  // The last thing on the page before the footer bar, and now following
+  // entries that are themselves 36px apart -- 40px no longer read as the
+  // end of the list, just as another gap in it.
+  margin-top: 4rem;
 
   .contact-links {
     a {

@@ -95,6 +95,16 @@ table.table a {
   max-width: 57ch;
 }
 
+// Paragraph spacing. Bootstrap's 1rem is 0.6 of a line against this 1.65
+// leading, so paragraphs touched and a page of prose read as one slab.
+// 1.4rem is a little under a full line: enough that a break registers,
+// not so much that the column comes apart. Direct children only, so the
+// abstracts, captions and footer keep the spacing set where they live.
+.about-bio > p,
+.post article > p {
+  margin-bottom: 1.4rem;
+}
+
 // Bootstrap sets .font-weight-bold to 700!important, which would drop a bold
 // slab into the middle of the about page's 300-weight name.
 .post-title .font-weight-bold {

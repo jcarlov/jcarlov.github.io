@@ -5,7 +5,9 @@
 @use "variables" as v;
 
 .publications {
-  margin-top: 2rem;
+  // Matches the 1.5rem under a section label; adjacent sibling margins
+  // collapse to the larger, so this is what sets the label-to-list gap.
+  margin-top: 1.5rem;
 
   h1 {
     color: var(--global-theme-color);
@@ -37,7 +39,10 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      // Each entry is a title, a line of authors, a venue and a row of
+      // controls -- 160 to 190px of stacked material. At 1rem the blocks
+      // ran together into one grey field; this gives each paper its own.
+      margin-bottom: 2.25rem;
       font-variant-numeric: tabular-nums;
 
       .preview {
@@ -168,7 +173,7 @@
 
         p {
           line-height: 1.65;
-          margin: 10px;
+          margin: 0.75rem 0.85rem;
           max-width: 68ch;
         }
 
